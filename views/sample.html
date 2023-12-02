@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Welcome Sample</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" , charset="UTF-8">
+	<link rel="stylesheet" href="lightstyles.css"> <!--doesnt work if directory is in href-->
+
+	<script>
+		function startTime() 
+		{
+			const today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			var d = today.getDate();
+			var mts = today.getMonth() + 1;
+			var y = today.getFullYear() + 1;
+			if (m<10)
+				{m = "0" + m}
+			if (s<10)
+				{s= "0" + s}
+			document.getElementById('timeDisplay').innerHTML = h + ":" + m + ":" + s + "   " + mts + "." + d + "." + y;
+			setTimeout(startTime, 1000);
+	  	}
+	</script>
+	    <nav>
+			<ul>
+				<li><a href="https://localhost/home.html">Home</a> </li>
+				<li><a href="https://localhost/registration.html">Registration</a> </li>
+				<li><a href="https://localhost/sample.html">Sample</a> </li>
+				<li><a href="https://localhost/vacationPackages">Vacation Packages</a></li>
+				<li><a href="http://localhost/contact.html"> Contact</a> </li>
+				<li><a href="https://localhost/404.html"> 404 Page</a></li>
+				<li id="timer"><a id="timeDisplay"></a></li>
+			</ul>
+		</nav>
+<!-- 
+		set header
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+
+			const promiseOfSomeData = fetch('header.html')
+				.then(response => response.text())
+				.then(html => {
+					return html;
+				})
+			window.onload = async () => {
+				let someData = await promiseOfSomeData;
+				document.getElementById('header-container').innerHTML = someData;
+				console.log("onload");
+			};
+		});
+
+	</script>
+	    <div id="header-container" onload="startTime()"></div> -->
+</head>
+
+<body>
+	<h1>Sample List</h1>
+	<div id="list1">
+		<ul>
+			<li>Fruit</li>
+			<li>Orange</li>
+			<li>Apple</li>
+			<li>Banana</li>
+		</ul>
+	</div>
+
+	<h2>Sample Table</h2>
+	<div id="table1">
+		<table>
+			<tr>
+				<td>Burgers</td></br>
+				<td>Fries</td></br>
+				<td>Chicken</td></br>
+			</tr>
+		</table>
+	</div>
+
+	<h3>Sample Form</h3>
+	<form method="post" id="form1">
+		<textarea name="message" placeholder="Enter your message here" id="f1text"></textarea>
+		<button type="submit">Submit the blogpost</button>
+	</form>
+</body>
+
+</html>
