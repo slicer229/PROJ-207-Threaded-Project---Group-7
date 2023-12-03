@@ -37,12 +37,12 @@
             if (passwordInput.type === "password") 
             {
                 passwordInput.type = "text";
-                eyeIcon.innerHTML = "&#128065";
+                // eyeIcon.innerHTML = "&#128065";
             } 
             else 
             {
                 passwordInput.type = "password";
-                eyeIcon.innerHTML = "&#128064";
+                // eyeIcon.innerHTML = "&#128064";
             }
         }
         
@@ -57,6 +57,19 @@
             x.style.left; 70;
             x.style.color; #888;
         }
+
+        function placeholderMachine2(labelID)
+        {
+            // change the position of the label of an input onclick
+            var x = document.getElementById("labelID");
+
+            x.style.font-size; 0.75 em;
+            x.style.position; relative;
+            x.style.top; -12;
+            x.style.left; 70;
+            x.style.color; #888;
+        }
+
     </script>
 </head>
 
@@ -154,7 +167,7 @@
             <label id="centerbox" for="lName">Last name</label>
             <input type="text" name="lName" title="lname" onclick="placeholderMachine(upbox)" required />
             <label id="centerbox" for="mName">Middle name (optional)</label>
-            <input type="text" name="mName" onclick="placeholderMachine(centerbox)" />
+            <input type="text" name="mName" placeholder="Middle name" onclick="placeholderMachine(centerbox)" />
         </div><br>
         <div> <p>Contact info</p>
             <label for="email">Email</label>
