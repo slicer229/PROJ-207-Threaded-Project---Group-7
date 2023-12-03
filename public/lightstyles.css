@@ -2,7 +2,7 @@
 
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
 
-/* reminder: put button in navbar to toggle dark mode/light mode  */
+/* *****reminder: put button in navbar to toggle dark mode/light mode*****  */
 
 /* make clickable websites float left instead of down */
 .float-left
@@ -11,7 +11,9 @@
 h1 {
     text-align: center;
 }
-ul 
+
+/* navigation bar */
+nav ul 
 {
     display:flex;
     flex-direction: row;
@@ -23,26 +25,27 @@ ul
     overflow: hidden;
     background-color: #333;
 }
-ul li {
+nav ul li 
+{
     list-style-type:none;
     margin-right:-4px;
     padding:10px;
     border-right:1px solid white;
     flex: 1;
 }
-li a 
-    {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
+nav li a 
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 li a:hover 
 {
     background-color: white;
 }
+
 #timeDisplay:hover {
     text-decoration: none;
     background-color: #333;

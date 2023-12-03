@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" , charset="UTF-8">
     <!-- app.use(express.static('public'));     -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="lightstyles.css">
     <script type="text/javascript" src="script.js"></script>
     <!-- set header -->
     <script>
@@ -154,6 +154,17 @@
 </head>
 
 <body>
+    <nav>
+        <ul>
+            <li><a href="index">Home</a> </li>
+            <li><a href="registration">Registration</a> </li>
+            <li><a href="sample">Sample</a> </li>
+            <li><a href="vacationPackages">Vacation Packages</a></li>
+            <li><a href="contact"> Contact</a> </li>
+            <li><a href="404"> 404 Page</a></li>
+            <li id="timer"><a id="timeDisplay"></a></li>
+        </ul>
+    </nav>
     <h1>Enter customer data</h1>
 
     <form method="post" action="/insertusers">
