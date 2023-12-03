@@ -28,23 +28,6 @@
                 // app.use(express.static('amyroseart/a6'));
             };
         });  
-
-        function togglePasswordVisibility(password) 
-        {
-            var passwordInput = document.getElementById("password");
-            var eyeIcon = document.getElementById("eyeIcon");
-
-            if (passwordInput.type === "password") 
-            {
-                passwordInput.type = "text";
-                // eyeIcon.innerHTML = "&#128065";
-            } 
-            else 
-            {
-                passwordInput.type = "password";
-                // eyeIcon.innerHTML = "&#128064";
-            }
-        }
         
         function placeholderMachine(labelID)
         {
@@ -196,10 +179,29 @@
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Password" required />
-            <span id="eyeIcon" onclick="togglePasswordVisibility(password)">&#128064</span>
+            <span id="eyeIcon">&#128064</span>
 
         </div><br>
         <button type="submit">Create an account</button>
     </form>
+    <script>
+        function togglePasswordVisibility() 
+        {
+            var passwordInput = document.getElementById("password");
+
+            if (passwordInput.type === "password") 
+            {
+                passwordInput.type = "text";
+                // eyeIcon.innerHTML = "&#128065";
+            } 
+            else 
+            {
+                passwordInput.type = "password";
+                // eyeIcon.innerHTML = "&#128064";
+            }
+        }
+        var inputElement = document.getElementById("eyeIcon");
+        inputElement.addEventListener('click', togglePasswordVisibility); 
+    </script>
 </body>
 </html>
