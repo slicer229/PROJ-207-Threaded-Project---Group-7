@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" , charset="UTF-8">
     <!-- app.use(express.static('public'));     -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightstyles.css">
     <script type="text/javascript" src="script.js"></script>
     <!-- set header -->
     <script>
@@ -27,49 +27,21 @@
             };
         });  
         
-        function placeholderMachine(labelID)
-        {
-            // change the position of the label of an input onclick
-            var x = document.getElementById("labelID");
-
-            x.style.font-size; 0.75 em;
-            x.style.position; relative;
-            x.style.top; -12;
-            x.style.left; 70;
-            x.style.color; #888;
-        }
-
-        function placeholderMachine2(labelID)
-        {
-            // change the position of the label of an input onclick
-            var x = document.getElementById("labelID");
-
-            x.style.font-size; 0.75 em;
-            x.style.position; relative;
-            x.style.top; -12;
-            x.style.left; 70;
-            x.style.color; #888;
-        }
-
     </script>
     <style>
-        /* div
-        {
-            display: flex;
-            flex-direction: column;
-        } */
+
         label 
         {
-            /* display: inline-block; */
+            display: inline-block;
             width: 120px;
             text-align: right;
             margin-right: 10px;
         }
         input 
-        {
+        { 
             color: black;
-            width: 200px;
-            margin-bottom: 10px;
+            /* width: 200px; */
+            /* margin-bottom: 10px; */
             height: 35px;
         }
 
@@ -77,6 +49,7 @@
         {
             background-color: black;
             color: white;
+            font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
         }
 
         button[type=submit] 
@@ -93,8 +66,8 @@
         {
             cursor: pointer;
             position: relative;
-            left: 20px;
-            top: 0px;
+            left: 250px;
+            top: 50px;
             color: #888;
         }
 
@@ -103,7 +76,7 @@
             left: 20px;
         }
 
-        input::content
+        /* input::content
         {
             size: 10cap;
             color: blue;
@@ -114,71 +87,141 @@
             position: relative;
             top: -8;
             color: #888;
+        } */
+
+        /* making an animated floating placeholder https://css-tricks.com/float-labels-css/#aa-more */
+        .field
+        {
+            display: flex;
+            flex-flow: column-reverse;
+            margin-bottom: 1em;
         }
 
-        #upbox
-        {
-            font-size: 0.75em;
-            position: relative;
-            top: -12;
-            left: 70;
-            color: #888;
-        }
-        #centerbox
-        {
-            font-size: 1em;
-            position: relative;
-            top: 0;
-            left: 90;
-            color: #888;
-        }
+        label,
+  input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+    width: 200px;
+  }
+
+  input {
+    font-size: 1.5em;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0;
+    cursor: text;
+  }
+
+  input:focus {
+    outline: 0;
+    border-bottom: 1px solid #666;
+  }
+
+  label {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  input:placeholder-shown+label {
+    cursor: text;
+    max-width: 70%;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 1.125rem) scale(0.2);
+    /* transform: translateX(0, 1.1rem) translateY(2, 1.5rem) scale(1.5); */
+  }
+
+  /* ::-webkit-input-placeholder {
+    opacity: 1;
+    transition: inherit;
+  } */
+
+  input:focus::-webkit-input-placeholder {
+    opacity: 1;
+  }
+
+  input:not(:placeholder-shown)+label,
+  input:focus+label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+  }
     </style>
 </head>
 
 <body>
+    <nav>
+        <ul>
+            <li><a href="index">Home</a> </li>
+            <li><a href="registration">Registration</a> </li>
+            <li><a href="sample">Sample</a> </li>
+            <li><a href="vacationPackages">Vacation Packages</a></li>
+            <li><a href="contact"> Contact</a> </li>
+            <li><a href="404"> 404 Page</a></li>
+            <li id="timer"><a id="timeDisplay"></a></li>
+        </ul>
+    </nav>
     <h1>Enter customer data</h1>
 
     <form method="post" action="/insertusers">
         <!-- <label for="username">Username</label><br>
         <input type="text" name="username" placeholder="username" /><br> -->
-        <div> <p>Name</p>
-            <label id="centerbox" for="fName">First name</label>
-            <input type="text" name="fName" title="firstName" required />
-            <label id="centerbox" for="lName">Last name</label>
-            <input type="text" name="lName" title="lname" onclick="placeholderMachine(upbox)" required />
-            <label id="centerbox" for="mName">Middle name (optional)</label>
-            <input type="text" name="mName" placeholder="Middle name" onclick="placeholderMachine(centerbox)" />
-        </div><br>
-        <div> <p>Contact info</p>
-            <label for="email">Email</label>
+        <div class="field"> 
+            <input type="text" name="lName" title="lname" placeholder="Last Name" required />
+            <label for="lName">Last name</label>
+
+            <input type="text" name="fName" title="firstName" placeholder="First Name" required />
+            <label for="fName">First name</label>
+            
+            <p>Name</p> </div><br>
+
+        <div class="field"> 
+            <input type="text" name="pPersonal" placeholder="Personal #" required />
+            <label for="pPersonal">Personal #</label>
+
+            <input type="text" name="pHome" placeholder="Business #" />
+            <label for="pHome">Business #</label>
+
             <input type="text" name="email" placeholder="Email" pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required />
-            <label for="pPersonal">Personal phone</label>
-            <input type="text" name="pPersonal" placeholder="personal phone number" required />
-            <label for="pHome">Home phone (optional)</label>
-            <input type="text" name="pHome" placeholder="Home phone number" />
-        </div><br>
-        <div> <p>Address</p>
-            <label for="address">Address</label>
-            <input type="text" name="address" placeholder="Address" required />
-            <label for="postalCode">Postal code</label>
-            <input type="text" name="postalCode" placeholder="Postal code" required /><br>
-            <label for="city">City</label>
+            <label for="email">Email</label>
+
+        <p>Contact info</p></div><br>
+        
+        <div class="field">
+
             <input type="text" name="city" placeholder="City" required />
-            <label for="province">Province</label>
-            <input type="text" name="province" placeholder="Province" required />
+            <label for="city">City</label>
 
-            <label for="country">Country</label>
+            <input type="text" name="postalCode" placeholder="Postal code" required />
+            <label for="postalCode">Postal code</label>
+
+            <input type="text" name="address" placeholder="Address" required />
+            <label for="address">Address</label>
+
+        <p>Address</p></div><br>
+        <div class="field">
+
             <input type="text" name="country" placeholder="Country" required />
-        </div><br>
-        <div><p>username & password</p>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" placeholder="Username" required >text here</input>
+            <label for="country">Country</label>
 
-            <label for="password">Password</label>
+            <input type="text" name="province" placeholder="Province" required />
+            <label for="province">Province</label>
+        
+            </div><br>
+
+        <div class="field">
+            <input type="text" id="username" name="username" placeholder="Username" required ></input>
+            <label for="username">Username</label>
+
             <input type="password" id="password" name="password" placeholder="Password" required />
+            <label for="password">Password</label>
             <span id="eyeIcon">&#128064</span>
 
-        </div><br>
+        <p>username & password</p></div><br>
         <button type="submit">Create an account</button>
     </form>
     <script>

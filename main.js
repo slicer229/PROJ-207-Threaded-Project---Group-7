@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, "views"), { extensions: ["html", "ht
 app.use(express.static(path.join(__dirname, "media"), { extensions: ["gif", "jpg", "png"] }));
 app.use(express.static(path.join(__dirname, "public"), { extensions: ["css", "js"] }));
 // app.use(express.urlencoded({ extended: true })); // pretty sure this is for temp engines
-//app.set("view engine", "html"); //express is set to read ejs, pug, or handlebars but not html
+// app.set("view engine", "html"); //express is set to read ejs, pug, or handlebars but not html
 
 
 app.get("/", (req, res)=>{ 
