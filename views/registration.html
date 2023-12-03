@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="script.js"></script>
-
-
     <!-- set header -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -28,23 +26,6 @@
                 // app.use(express.static('amyroseart/a6'));
             };
         });  
-
-        function togglePasswordVisibility(password) 
-        {
-            var passwordInput = document.getElementById("password");
-            var eyeIcon = document.getElementById("eyeIcon");
-
-            if (passwordInput.type === "password") 
-            {
-                passwordInput.type = "text";
-                eyeIcon.innerHTML = "&#128065";
-            } 
-            else 
-            {
-                passwordInput.type = "password";
-                eyeIcon.innerHTML = "&#128064";
-            }
-        }
         
         function placeholderMachine(labelID)
         {
@@ -57,10 +38,20 @@
             x.style.left; 70;
             x.style.color; #888;
         }
-    </script>
-</head>
 
-<body>
+        function placeholderMachine2(labelID)
+        {
+            // change the position of the label of an input onclick
+            var x = document.getElementById("labelID");
+
+            x.style.font-size; 0.75 em;
+            x.style.position; relative;
+            x.style.top; -12;
+            x.style.left; 70;
+            x.style.color; #888;
+        }
+
+    </script>
     <style>
         /* div
         {
@@ -142,7 +133,9 @@
             color: #888;
         }
     </style>
+</head>
 
+<body>
     <h1>Enter customer data</h1>
 
     <form method="post" action="/insertusers">
@@ -154,7 +147,7 @@
             <label id="centerbox" for="lName">Last name</label>
             <input type="text" name="lName" title="lname" onclick="placeholderMachine(upbox)" required />
             <label id="centerbox" for="mName">Middle name (optional)</label>
-            <input type="text" name="mName" onclick="placeholderMachine(centerbox)" />
+            <input type="text" name="mName" placeholder="Middle name" onclick="placeholderMachine(centerbox)" />
         </div><br>
         <div> <p>Contact info</p>
             <label for="email">Email</label>
@@ -183,10 +176,29 @@
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Password" required />
-            <span id="eyeIcon" onclick="togglePasswordVisibility(password)">&#128064</span>
+            <span id="eyeIcon">&#128064</span>
 
         </div><br>
         <button type="submit">Create an account</button>
     </form>
+    <script>
+        function togglePasswordVisibility() 
+        {
+            var passwordInput = document.getElementById("password");
+
+            if (passwordInput.type === "password") 
+            {
+                passwordInput.type = "text";
+                // eyeIcon.innerHTML = "&#128065";
+            } 
+            else 
+            {
+                passwordInput.type = "password";
+                // eyeIcon.innerHTML = "&#128064";
+            }
+        }
+        var eyeIcon = document.getElementById("eyeIcon");
+        eyeIcon.addEventListener('click', togglePasswordVisibility); 
+    </script>
 </body>
 </html>

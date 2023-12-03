@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Welcome to Xplore</title>
+    <link href="darkstyles.css" rel="stylesheet">
+    <script>
+        function startTime() 
+        {
+            const today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            var d = today.getDate();
+            var mts = today.getMonth() + 1;
+            var y = today.getFullYear() + 1;
+            if (m<10)
+                {m = "0" + m}
+            if (s<10)
+                {s= "0" + s}
+            document.getElementById('timeDisplay').innerHTML = h + ":" + m + ":" + s + "   " + mts + "." + d + "." + y;
+            setTimeout(startTime, 1000);
+        }
+    </script>
+</head>
+<body onload="startTime()">
+    <nav>
+		<ul>
+			<li><a href="index">Home</a> </li>
+			<li><a href="registration">Registration</a> </li>
+			<li><a href="sample">Sample</a> </li>
+			<li><a href="vacationPackages">Vacation Packages</a></li>
+			<li><a href="contact"> Contact</a> </li>
+			<li><a href="404"> 404 Page</a></li>
+			<li id="timer"><a id="timeDisplay"></a></li>
+		</ul>
+	</nav>
+    <h1>lorem ipsum</h1>
+</body>
+</html>
