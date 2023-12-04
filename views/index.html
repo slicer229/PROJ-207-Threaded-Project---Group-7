@@ -25,7 +25,22 @@
 			background-size: cover;
 			padding-top: 20%;
 			padding-bottom: 5%;
-			color: white;
+			font-size: 72px;
+		}
+		#gradHeader {
+			background: -webkit-linear-gradient(144deg, rgba(255,237,0,0.9150035014005602) 0%, rgba(255,169,0,0.8729866946778712) 100%);
+			background-clip:content-box;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bolder;
+			font-style:italic;
+			text-shadow: 2px 2px 5px black;
+		}
+		.mainbox 
+		.logo {
+			width: 20%;
+			height: 20%;
+			border-radius: 100%;
 		}
 		
 		
@@ -43,7 +58,7 @@
 			<li id="timer"><a id="timeDisplay"></a></li>
 		</ul>
 	</nav>
-    <div class="mainbox"><h1>Welcome to Travel Experts</h1>
+    <div class="mainbox"><h1><img class="logo" src="Logo.jpg"><br><span id="gradHeader">Welcome to Travel Experts</span></h1>
 	<div>test2</div>
 	<div>test3</div>
 </div>
