@@ -2,13 +2,47 @@
 <html>
 <head>
 	<style>
+		@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@1,100&display=swap');
+		body {
+			font-family: "PT Serif";
+			background: linear-gradient(45deg, rgb(93, 160, 243), white);
+		}
+		#headText {
+			text-align: center;
+		}
 		#container {
-				display: flex;
-				border: 1px solid #ccc;
-				margin: 10px;
-				padding: 10px;
-				max-width: 600px;
-			}
+			display: flex;
+			border: 3px solid #000000;
+			margin: 10px;
+			padding: 8px;
+			max-width: 1000px;
+		}
+		#imgContainer{
+			position: relative;
+			padding: 1mm;
+			height: 10cm;
+			width: 5cm;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#image {
+			height: 4cm;
+			width: 4cm;
+			position: relative;
+			padding: 1mm;
+			border: 1px solid black;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#details {
+			margin-left: 20px;
+			margin-right: 5px;
+		}
+		.label {
+			color: black;
+			font-weight: bold;
+		}
+		
 	</style>
     <meta charset="UTF-8" />
     <title>Vacation Packages</title>
@@ -27,27 +61,30 @@
 		</ul>
 	</nav>
 
-	<div id="vaclist">
+	<h1 id="headText">Vacation Packages</h1>
 
-			<div id="container">
-				<div id="image">
-					<img src="">
-				</div>
-				<div id="details"> <!--WILL BE A FUNCTION FOR PHASE 2-->
-					<h1>Vacation Package 1</h1>
-					<p>Destination: Royal Kona Resort</p>
-					<p>Flight: Air Canada</p>
-					<p>Rating: ★★★★★</p>
-					<p>Price: $2,246</p>
-					<p>Description: 
-						Royal Kona Resort is located near the beach and in a walkable area with good shopping. Kahalu'u Beach Park and Kona Country Club are worth checking out if an activity is on the agenda, while those wishing to experience the area's natural beauty can explore Magic Sands Beach and Kaloko-Honokohau National Historical Park. Don't miss out on a visit to Kona Le'a Plantation. Kayaking and scuba diving offer great chances to get out on the surrounding water, or you can seek out an adventure with hiking/biking trails and ecotours nearby.
-					</p>
-					<p>Review: Very Good</p> 
-					<!--Mig-->
-					<button type="button">Book</button>
-				</div>
+	<div id="vaclist">
+		<div id="container">
+			<div id="imgContainer"> 
+				<img id="image" src="Koanpool.webp"></br>
+				<img id="image" src="Koanpool2.webp">
+			</div>
+			<div id="details">
+				<h1>Vacation Package 1</h1>
+
+				<p><div class="label">Destination: </div>Royal Kona Resort</p>
+				<p><div class="label">Flight: </div>Air Canada</p>
+				<p><div class="label">Rating: </div>★★★★★</p>
+				<p><div class="label">Price: </div>$2,246</p>
+				<p><div class="label">Description: </div> 
+					Royal Kona Resort is located near the beach and in a walkable area with good shopping. Kahalu'u Beach Park and Kona Country Club are worth checking out if an activity is on the agenda, while those wishing to experience the area's natural beauty can explore Magic Sands Beach and Kaloko-Honokohau National Historical Park. Don't miss out on a visit to Kona Le'a Plantation. Kayaking and scuba diving offer great chances to get out on the surrounding water, or you can seek out an adventure with hiking/biking trails and ecotours nearby.
+				</p>
+				<p><div class="label">Review: </div>Very Good</p> 
+
+				<button type="button">Book</button>
 			</div>
 		</div>
-    <h1>vacation packages</h1>
+	</div>
+
 </body>
 </html>
