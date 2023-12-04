@@ -6,7 +6,7 @@ function startTime()
     var s = today.getSeconds();
     var d = today.getDate();
     var mts = today.getMonth() + 1;
-    var y = today.getFullYear() + 1;
+    var y = today.getFullYear();
     if (m<10)
         {m = "0" + m}
     if (s<10)
