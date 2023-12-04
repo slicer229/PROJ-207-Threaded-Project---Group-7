@@ -55,7 +55,7 @@
         {
             transition: all 0.2s; /* time of transition */
             touch-action: manipulation; /* transition */
-            width: 200px; 
+            width: 200px; /* size of the input box */
         }
 
         input 
@@ -85,30 +85,30 @@
             color: #999; /* same color as an input placeholder */
         }
 
+         /* CSS before the transformation */
         input:placeholder-shown+label 
         {
             cursor: text;
             max-width: 70%;
             overflow: hidden;
             text-overflow: ellipsis;
-            transform-origin: left bottom;
-            transform: translate(4px, 3.5rem) /* scale(0.2) */;
+            transform-origin: bottom;
+            transform: translate(4px, 3.5rem) scale(1);
+            
         }
 
-
-        input:focus::-webkit-input-placeholder {
-            opacity: 1;
-        }
-
+        /* CSS after the transformation */
         input:not(:placeholder-shown)+label,
-        input:focus+label {
-            transform: translate(0, 0) scale(1);
-            /* cursor: pointer; */
+        input:focus+label 
+        {
+            transform: translate(5px, 17px) scale(0.8);
+            color: green;
         }
     </style>
     <script type="text/javascript" src="getTime.js"></script> 
 </head>
 
+<!-- set the header -->
 <body onload="startTime()">
     <nav>
         <ul>
@@ -120,61 +120,61 @@
             <li id="timer"><a id="timeDisplay"></a></li>
         </ul>
     </nav>
-    <h1>Let's get you all set up!</h1>
+    <h1>Let's get you set up!</h1>
 
     <form method="post" action="/insertusers">
-        <!-- <label for="username">Username</label><br>
-        <input type="text" name="username" placeholder="username" /><br> -->
+        <!-- The username will not be labelled because it is an automatic number that every user gets when signing in-->
+        <!-- <label for="username">Username</label>
+        <input type="text" name="username" placeholder="username" />-->
+
         <div class="field"> 
-            <input type="text" name="lName" title="lname" placeholder=" " required />
+            <input type="text" id="lName" name="lName" title="lname" placeholder=" " required />
             <label for="lName">Last name</label>
 
-            <input type="text" name="fName" title="firstName" placeholder=" " required />
+            <input type="text" id="fName" name="fName" title="firstName" placeholder=" " required />
             <label for="fName">First name</label>
             
             <p>Name</p> </div><br>
 
         <div class="field"> 
-            <input type="text" name="pPersonal" placeholder=" " required />
+            <input type="text" id="pPhone" name="pPhone" placeholder=" " required />
             <label for="pPersonal">Personal #</label>
 
-            <input type="text" name="pHome" placeholder=" " />
+            <input type="text" id="bPhone" name="bPhone" placeholder=" " />
             <label for="pHome">Business #</label>
 
-            <input type="text" name="email" placeholder=" " pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required />
+            <input type="text" id="email" name="email" placeholder=" " pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required />
             <label for="email">Email</label>
 
         <p>Contact info</p></div><br>
         
         <div class="field">
 
-            <input type="text" name="city" placeholder=" " required />
-            <label for="city">City</label>
-
-            <input type="text" name="postalCode" placeholder=" " required />
-            <label for="postalCode">Postal code</label>
-
-            <input type="text" name="address" placeholder=" " required />
-            <label for="address">Address</label>
-
-        <p>Address</p></div><br>
-        <div class="field">
-
-            <input type="text" name="country" placeholder=" " required />
+            <input type="text" id="country" name="country" placeholder=" " required />
             <label for="country">Country</label>
 
-            <input type="text" name="province" placeholder=" " required />
+            <input type="text" id="province" name="province" placeholder=" " required />
             <label for="province">Province</label>
+
+            <input type="text" id="city" name="city" placeholder=" " required />
+            <label for="city">City</label>
+
+            <input type="text" id="postalCode" name="postalCode" placeholder=" " required />
+            <label for="postalCode">Postal code</label>
+
+            <input type="text" id="address" name="address" placeholder=" " required />
+            <label for="address">Address</label>
         
-            </div><br>
+            <p>Address</p></div><br>
 
         <div class="field">
-            <input type="text" id="username" name="username" placeholder=" " required ></input>
-            <label for="username">Username</label>
 
-            <input type="password" id="password" name=" " required />
+            <input type="password" id="password" name="password" required />
             <label for="password">Password</label>
             <span id="eyeIcon">&#128064</span>
+
+            <input type="text" id="username" name="username" placeholder=" " required ></input>
+            <label for="username">Username</label>
 
         <p>username & password</p></div><br>
         <button type="submit">Create an account</button>
