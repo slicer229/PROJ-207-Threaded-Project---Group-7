@@ -7,8 +7,8 @@
 		body {
 			font-family: "PT Serif";
 			background-image: url("tropwater.webp");
-			
 		}
+		
 		/* TO BLUR A IMAGE
 		.background-image {
 			position: absolute;
@@ -35,6 +35,7 @@
 			margin-left: 20px;
 			margin-right: 5px;
 			z-index: 2;
+			width: 100%;
 		}
 		#container {
 			position: relative;
@@ -42,7 +43,8 @@
 			border: 3px solid #000000;
 			margin: 10px;
 			padding: 15px;
-			max-width: 1000px;
+			width: 95%;
+			height: 55%;
 			z-index: 2;
 			background-image: linear-gradient(45deg, white, white)
 		}
@@ -87,6 +89,43 @@
 		#getInfo {
 			color: black;
 		}
+		#cImages{
+			height: 100px;
+			width: 100px;
+			top: 10px;
+		}
+		#categories {
+			margin: 15px;
+			padding: 15px;
+		}
+
+		.column {
+			float: left;
+			width: 33.33%;
+			padding: 5px;
+			position: center;
+		}
+		.row {
+			padding: 20px;
+			float: left;
+			
+            
+		}
+		.row::after {
+			content: "";
+			clear: both;
+			display: table;
+			position: center;
+		}
+		#image2 {
+			clip-path: circle(); /*makes image a circle*/
+			height: 90px;
+			width: 90px;
+		}
+		#image2:hover {
+			border: 3px solid rgb(100, 201, 235);
+			border-radius: 50%;
+		}
 		/*
 		#hawaii {
 			
@@ -124,10 +163,21 @@
 			<li id="timer"><a id="timeDisplay"></a></li>
 		</ul>
 	</nav>
+	
 
 	<h1 id="headText">Vacation Packages Available</h1>
 
-	<!--<div class="hawaii"><img id="hawaii" src="Hawaii.webp"><p id="hwtext">Hawaii</p></div>-->
+	<div class="row"> 
+		<div class="column"> 
+			<img id="image2" src="koanhotel.webp">	
+		</div>
+		<div class="column">
+			<img id="image2" src="cinnamon2.webp">	
+		</div>
+		<div class="column">
+			<img id="image2" src="mujeres3.webp">	
+		</div>
+	</div>
 
 	<div id="vaclist">
 
@@ -142,14 +192,14 @@
 			<div id="details">
 				<h1>Vacation Package 1</h1>
 					<p id="destination"><div class="label2">Destination: </div>Royal Kona Resort</p>
-					<p><div class="label2" id="flight">Flight: </div>Air Canada</p>
+					<p><div class="label2" id="flight">Flight: </div>Air Canada🍁</p>
 					<p><div class="label2" id="rating">Rating: </div><div id="stars">★★★★★</div></p>
 					<p><div class="label2" id="price">Price: </div>$2,246</p>
 					<p><div class="label2" id="description">Description: </div> 
-						Royal Kona Resort is located near the beach and in a walkable area with good shopping. Kahalu'u Beach Park and Kona Country Club are worth checking out if an activity is on the agenda, while those wishing to experience the area's natural beauty can explore Magic Sands Beach and Kaloko-Honokohau National Historical Park. Don't miss out on a visit to Kona Le'a Plantation. Kayaking and scuba diving offer great chances to get out on the surrounding water, or you can seek out an adventure with hiking/biking trails and ecotours nearby.
+						Royal Kona Resort is located near the beach and in a walkable area with good shopping. Kahalu'u Beach Park and Kona Country Club are worth checking out if an activity is on the agenda, while those wishing to experience the area's natural beauty can explore Magic Sands Beach and Kaloko-Honokohau National Historical Park. Don't miss out on a visit to Kona Le'a Plantation.
 					</p>
 					<p><div class="label2" id="review">Review: </div><div id="VG">Very Good</div></p> 
-					<p><div class="label2" id="tour">Tour Guide: </div><a>https://www.royalkona.com/plan-your-stay/explore-around-the-big-island</a></p>
+					<p><div class="label2" id="tour">Tour Guide: </div><a href="https://www.royalkona.com/plan-your-stay/explore-around-the-big-island">https://www.royalkona.com/plan-your-stay/explore-around-the-big-island</a></p>
 				<button type="button">Book</button>
 				<a href="/contact.html" id="getInfo">
 					<button>Request more information</button>
@@ -157,7 +207,8 @@
 				<!--Add additional features to add addition services.-->
 				<!--Add hover and roll over functions-->
 				<!--Add categories feature, Hawaii, Maldives, etc-->
-				<!--Add -->
+				<!--On whatever category its disaplying, make sure to add an indication maybe the circle hovering or a text saying the category-->
+				
 			</div>
 		</div>
 		
@@ -175,7 +226,7 @@
 			<div id="details">
 				<h1>Vacation Package 2</h1>
 					<p id="destination"><div class="label2">Destination: </div>Cinnamon Velifushi Maldives</p>
-					<p><div class="label2" id="flight">Flight: </div>West Jet</p>
+					<p><div class="label2" id="flight">Flight: </div>West Jet🍁</p>
 					<p><div class="label2" id="rating">Rating: </div><div id="stars">★★★★★</div></p>
 					<p><div class="label2" id="price">Price: </div>$2,396</p>
 					<p><div class="label2" id="description">Description: </div> 
@@ -185,7 +236,7 @@
 					<div id="VG">Very Good </div></p> 
 		
 
-					<p><div class="label2" id="tour">Tour Guide: </div><a>https://traveljee.com/destination/asia/maldives/how-to-get-to-cinnamon-velifushi-maldives/</a></p>
+					<p><div class="label2" id="tour">Tour Guide: </div><a href="https://traveljee.com/destination/asia/maldives/how-to-get-to-cinnamon-velifushi-maldives/">https://traveljee.com/destination/asia/maldives/how-to-get-to-cinnamon-velifushi-maldives/</a></p>
 				<button type="button">Book</button>
 				<a href="/contact.html" id="getInfo">
 					<button>Request more information</button>
@@ -208,14 +259,14 @@
 			<div id="details">
 				<h1>Vacation Package 3</h1>
 					<p id="destination"><div class="label2">Destination: </div>Excellence Playa Mujeres</p>
-					<p><div class="label2" id="flight">Flight: </div>Air Canada</p>
+					<p><div class="label2" id="flight">Flight: </div>Air Canada🍁</p>
 					<p><div class="label2" id="rating">Rating: </div><div id="stars">★★★★</div></p>
 					<p><div class="label2" id="price">Price: </div>$1,823</p>
 					<p><div class="label2" id="description">Description: </div> 
 						Excellence Playa Mujeres - Adults Only All Inclusive is located in Playa Mujeres, a neighborhood in Punta Sam, and is next to a golf course and on a private beach.
 					</p>
 					<p><div class="label2" id="review">Review: </div><div id="G">Good</div></p> 
-					<p><div class="label2" id="tour">Tour Guide: </div><a>https://www.islandlifemexico.com/cancun-visitors-guide/</a></p>
+					<p><div class="label2" id="tour">Tour Guide: </div><a href="https://www.islandlifemexico.com/cancun-visitors-guide/">https://www.islandlifemexico.com/cancun-visitors-guide/</a></p>
 				<button type="button">Book</button>
 				<a href="/contact.html" id="getInfo">
 					<button>Request more information</button>
