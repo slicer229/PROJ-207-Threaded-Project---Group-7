@@ -1,4 +1,4 @@
-/* Light CSS Styles */
+/* CSS - Cascading STYLE Sheet */
 
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
 
@@ -102,5 +102,5 @@ input[type=text]
 
 /* Light Style for vacation Packages  */
 #container {
-    background: linear-gradient(45deg, rgb(255, 255, 255), white)
+    background: linear-gradient(45deg, rgb(112, 220, 247), white)
 }
