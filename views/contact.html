@@ -6,15 +6,12 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="lightstyles.css">
     <style>
-        header 
-    {
-        height: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        
-    }
+header {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
 
 h1 {
     color:white;
@@ -28,9 +25,6 @@ h2 {
     font-weight: bolder;
 }
 
-
-
-
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
@@ -39,7 +33,6 @@ body {
     background-size: cover;
     width: 100%;
 }
-
 
 .container {
     max-width: 1100px;
@@ -113,12 +106,12 @@ body {
 .form-group button[type="submit"]:hover {
     background-color: rgb(61, 85, 193);
 }
-.contact-info div{
+.contact-info div {
     background-color: grey;
 
     
 }
-#contact-form{
+#contact-form {
     color: white;
 }
 </style>
@@ -130,8 +123,9 @@ body {
         }
     }
 </script>
+<script type="text/javascript" src="getTime.js"></script>
 </head>
-<body>
+<body onload="startTime()">
     <nav>
         <ul>
             <li><a href="index">Home</a> </li>

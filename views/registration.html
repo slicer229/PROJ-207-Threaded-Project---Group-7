@@ -7,7 +7,7 @@
     <!-- app.use(express.static('public'));     -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="lightstyles.css">
-    <script type="text/javascript" src="script.js"></script>
+    <!-- <script type="text/javascript" src="script.js"></script> // commenting out cause script.js doesn't contain anything atm  -->
     <!-- set header -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -24,12 +24,13 @@
 
                 // trying to make my html see my header, but it's not working. https://stackoverflow.com/questions/70161685/css-not-loading-with-node-js-and-express 
                 // app.use(express.static('amyroseart/a6'));
+
+                // I don't think you have your header.html in the right repository  -Lance
             };
         });  
         
     </script>
     <style>
-
         label 
         {
             display: inline-block;
@@ -97,64 +98,65 @@
             margin-bottom: 1em;
         }
 
-        label,
-  input {
-    transition: all 0.2s;
-    touch-action: manipulation;
-    width: 200px;
-  }
+        label, /* what is this for */
+        input {
+            transition: all 0.2s;
+            touch-action: manipulation;
+            width: 200px;
+        }
 
-  input {
-    font-size: 1.5em;
-    border: 0;
-    border-bottom: 1px solid #ccc;
-    font-family: inherit;
-    -webkit-appearance: none;
-    appearance: none;
-    border-radius: 0;
-    padding: 0;
-    cursor: text;
-  }
+        input {
+            font-size: 1.5em;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+            font-family: inherit;
+            -webkit-appearance: none;
+            appearance: none;
+            border-radius: 0;
+            padding: 0;
+            cursor: text;
+        }
 
-  input:focus {
-    outline: 0;
-    border-bottom: 1px solid #666;
-  }
+        input:focus {
+            outline: 0;
+            border-bottom: 1px solid #666;
+        }
 
-  label {
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
+        label {
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
 
-  input:placeholder-shown+label {
-    cursor: text;
-    max-width: 70%;
-    /* white-space: nowrap; */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transform-origin: left bottom;
-    transform: translate(0, 1.125rem) scale(0.2);
-    /* transform: translateX(0, 1.1rem) translateY(2, 1.5rem) scale(1.5); */
-  }
+        input:placeholder-shown+label {
+            cursor: text;
+            max-width: 70%;
+            /* white-space: nowrap; */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transform-origin: left bottom;
+            transform: translate(0, 1.125rem) scale(0.2);
+            /* transform: translateX(0, 1.1rem) translateY(2, 1.5rem) scale(1.5); */
+        }
 
-  /* ::-webkit-input-placeholder {
-    opacity: 1;
-    transition: inherit;
-  } */
+        /* ::-webkit-input-placeholder {
+            opacity: 1;
+            transition: inherit;
+        } */
 
-  input:focus::-webkit-input-placeholder {
-    opacity: 1;
-  }
+        input:focus::-webkit-input-placeholder {
+            opacity: 1;
+        }
 
-  input:not(:placeholder-shown)+label,
-  input:focus+label {
-    transform: translate(0, 0) scale(1);
-    cursor: pointer;
-  }
+        input:not(:placeholder-shown)+label,
+        input:focus+label {
+            transform: translate(0, 0) scale(1);
+            cursor: pointer;
+        }
     </style>
+    <script type="text/javascript" src="getTime.js"></script> 
 </head>
 
-<body>
+<body onload="startTime()">
     <nav>
         <ul>
             <li><a href="index">Home</a> </li>
