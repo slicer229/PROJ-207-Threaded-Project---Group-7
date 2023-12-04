@@ -2,13 +2,17 @@
 <html>
 <head>
 	<style>
+		
 		@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@1,100&display=swap');
 		body {
 			font-family: "PT Serif";
-			background: linear-gradient(45deg, rgb(93, 160, 243), white);
+			background-image: url("tropwater.webp");
+
 		}
 		#headText {
 			text-align: center;
+			color: white;
+			text-shadow: 0 0 3px black, 0 0 5px black;
 		}
 		#container {
 			display: flex;
@@ -16,6 +20,8 @@
 			margin: 10px;
 			padding: 8px;
 			max-width: 1000px;
+			/*width: 650px;
+			height: 400px;*/
 		}
 		#imgContainer{
 			position: relative;
@@ -26,8 +32,8 @@
 			margin-right: auto;
 		}
 		#image {
-			height: 4cm;
-			width: 4cm;
+			height: 4.13cm;
+			width: 4.13cm;
 			position: relative;
 			padding: 1mm;
 			border: 1px solid black;
@@ -38,15 +44,38 @@
 			margin-left: 20px;
 			margin-right: 5px;
 		}
-		.label {
+		.label2 {
 			color: black;
 			font-weight: bold;
+		}	
+		button {
+			position: center;
 		}
+		/*
+		#destination {
+			text-align: center;
+		}
+		#flight {
+
+		}
+		#rating {
+
+		}
+		#price {
+
+		}
+		#description {
+
+		}
+		#review {
+
+		} */
 		
 	</style>
     <meta charset="UTF-8" />
     <title>Vacation Packages</title>
     <link href="lightstyles.css" rel="stylesheet">
+
 </head>
 <body>
     <nav>
@@ -67,20 +96,19 @@
 		<div id="container">
 			<div id="imgContainer"> 
 				<img id="image" src="Koanpool.webp"></br>
-				<img id="image" src="Koanpool2.webp">
+				<img id="image" src="Koanpool2.webp"></br>
+				<img id="image" src="koanhotel.webp">
 			</div>
 			<div id="details">
 				<h1>Vacation Package 1</h1>
-
-				<p><div class="label">Destination: </div>Royal Kona Resort</p>
-				<p><div class="label">Flight: </div>Air Canada</p>
-				<p><div class="label">Rating: </div>★★★★★</p>
-				<p><div class="label">Price: </div>$2,246</p>
-				<p><div class="label">Description: </div> 
-					Royal Kona Resort is located near the beach and in a walkable area with good shopping. Kahalu'u Beach Park and Kona Country Club are worth checking out if an activity is on the agenda, while those wishing to experience the area's natural beauty can explore Magic Sands Beach and Kaloko-Honokohau National Historical Park. Don't miss out on a visit to Kona Le'a Plantation. Kayaking and scuba diving offer great chances to get out on the surrounding water, or you can seek out an adventure with hiking/biking trails and ecotours nearby.
-				</p>
-				<p><div class="label">Review: </div>Very Good</p> 
-
+					<p id="destination"><div class="label2">Destination: </div>Royal Kona Resort</p>
+					<p><div class="label2" id="flight">Flight: </div>Air Canada</p>
+					<p><div class="label2" id="rating">Rating: </div>★★★★★</p>
+					<p><div class="label2" id="price">Price: </div>$2,246</p>
+					<p><div class="label2" id="description">Description: </div> 
+						Royal Kona Resort is located near the beach and in a walkable area with good shopping. Kahalu'u Beach Park and Kona Country Club are worth checking out if an activity is on the agenda, while those wishing to experience the area's natural beauty can explore Magic Sands Beach and Kaloko-Honokohau National Historical Park. Don't miss out on a visit to Kona Le'a Plantation. Kayaking and scuba diving offer great chances to get out on the surrounding water, or you can seek out an adventure with hiking/biking trails and ecotours nearby.
+					</p>
+					<p><div class="label2" id="review">Review: </div>Very Good</p> 
 				<button type="button">Book</button>
 			</div>
 		</div>

@@ -73,3 +73,9 @@ input[type=text]
 {
     color: black;
 }
+
+/* Dark Style for vacation Packages  */
+#container {
+    background: linear-gradient(45deg, rgb(0, 0, 0), white);
+    opacity: 1.0;
+}
