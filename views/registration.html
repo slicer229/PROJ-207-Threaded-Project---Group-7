@@ -8,47 +8,41 @@
     <link rel="stylesheet" href="lightstyles.css">
 
     <style>
-        label 
+        /* label 
         {
+            font-size: large;
             display: inline-block;
             width: 120px;
             text-align: right;
             margin-right: 10px;
-        }
+        } */
+
+/* make password circles black */
         input 
         { 
             color: black;
-            height: 35px;
         }
 
-        button[type=submit] 
-        {
-            color: black;
-        }
-
-        .password[type=password] 
-        {
-            color: black;
-        }
-
+/* CSS for the icon on the right of the password input */
         #eyeIcon 
         {
-            cursor: pointer;
-            position: relative;
-            left: 100%;
-            top: 50px;
-            color: #888;
+            cursor: pointer; /* make the cursor look like you clicking on the icon */
+            position: relative; /* make the position relative to the password input */
+            left: 100%; /* place it directly left of the input of the password input */
+            top: 50px; /* place it vertically in the middle of the input box */
         }
 
-        #accountPassword 
+        /* #accountPassword 
         {
             left: 20px;
-        }
+        } */
 
+/* CSS for the form */
         form
         {
-            color: black;
+            /* color: black; */
             padding-left: 30%;
+            padding-right: 30%;
             padding-bottom: 5%;
             /* put line padding around the form */
             border: 1px solid #ccc;
@@ -200,12 +194,12 @@
             if (passwordInput.type === "password") 
             {
                 passwordInput.type = "text";
-                // eyeIcon.innerHTML = "&#128065";
+                eyeIcon.innerHTML = "&#128065";
             } 
             else 
             {
                 passwordInput.type = "password";
-                // eyeIcon.innerHTML = "&#128064";
+                eyeIcon.innerHTML = "&#128064";
             }
         }
         var eyeIcon = document.getElementById("eyeIcon");
