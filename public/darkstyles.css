@@ -1,4 +1,4 @@
-/* CSS - Cascading STYLE Sheet */
+/* Dark CSS Styles - **currently outdated** */
 
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
 
@@ -72,4 +72,10 @@ textarea
 input[type=text] 
 {
     color: black;
+}
+
+/* Dark Style for vacation Packages  */
+#container {
+    background: linear-gradient(45deg, rgb(0, 0, 0), white);
+    opacity: 1.0;
 }
