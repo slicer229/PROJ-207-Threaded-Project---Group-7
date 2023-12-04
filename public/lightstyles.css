@@ -52,50 +52,116 @@ li a:hover
     color: white;
 } 
 
-body
-{
-    background-color: white;
-    color: black;
+header {
+    
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
 }
 
-table {
-    width: 25%;
-    }
-
-th, td {
-        border: 1px solid #333;
-        text-align: left;
-    }
-
-th {	
-        background-color: white;
-    }
-
-script
-{
-    color: black;
+h1 {
+    color:white;
+    font-size: 48px;
+    text-align: center;
+    
 }
 
-input
-{
-    background-color: white;
+h2{
+    text-align: left;
+    font-weight: bolder;
+}
+
+
+
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("https://github.com/slicer229/PROJ-207-Threaded-Project---Group-7/blob/contact/webMedia/maldives.jpg?raw=true")  no-repeat center fixed;
+    width: 100%;
+}
+
+
+.container {
+    max-width: 1100px;
+    max-height: 900px;
+    margin: 0 auto;
+    
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    
+    
+    
+
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 12px;
+    
+}
+
+.form-container {
+    flex: 1;
+    margin-right: 30px
+   
+}
+
+.contact-info {
+    flex: 1;
+    border: 5px solid rgb(0, 0, 0)363;
+    border-radius: 4px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 12px;
+    color:white;
+    
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+
+.form-group button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #111826;
     color: white;
-    border-color: rgb(0, 0, 0);
-    padding: 5px;
-    margin: 3px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
 }
 
-textarea
-{
-    background-color: white;
-    color: white;
-    border-color: black;
-    padding: 5px;
-    margin: 3px;
+.form-group button[type="submit"]:hover {
+    background-color: rgb(61, 85, 193);
 }
+.contact-info div{
+    background-color: grey;
 
-/* change text color in my input box to black */
-input[type=text] 
-{
-    color: white;
+    
+}
+#contact-form{
+    color:white;
 }
