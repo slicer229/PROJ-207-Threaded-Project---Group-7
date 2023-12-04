@@ -7,29 +7,7 @@
     <!-- app.use(express.static('public'));     -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="lightstyles.css">
-    <!-- <script type="text/javascript" src="script.js"></script> // commenting out cause script.js doesn't contain anything atm  -->
-    <!-- set header -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
 
-            const promiseOfSomeData = fetch('header.html')
-                .then(response => response.text())
-                .then(html => {
-                    return html;
-                })
-            window.onload = async () => {
-                let someData = await promiseOfSomeData;
-                document.getElementById('header-container').innerHTML = someData;
-                console.log("onload");
-
-                // trying to make my html see my header, but it's not working. https://stackoverflow.com/questions/70161685/css-not-loading-with-node-js-and-express 
-                // app.use(express.static('amyroseart/a6'));
-
-                // I don't think you have your header.html in the right repository  -Lance
-            };
-        });  
-        
-    </script>
     <style>
         label 
         {
@@ -41,16 +19,7 @@
         input 
         { 
             color: black;
-            /* width: 200px; */
-            /* margin-bottom: 10px; */
             height: 35px;
-        }
-
-        body 
-        {
-            background-color: black;
-            color: white;
-            font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
         }
 
         button[type=submit] 
@@ -67,7 +36,7 @@
         {
             cursor: pointer;
             position: relative;
-            left: 250px;
+            left: 100%;
             top: 50px;
             color: #888;
         }
@@ -77,18 +46,16 @@
             left: 20px;
         }
 
-        /* input::content
+        form
         {
-            size: 10cap;
-            color: blue;
+            color: black;
+            padding-left: 30%;
+            padding-bottom: 5%;
+            /* put line padding around the form */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f2f2f2;
         }
-        input::placeholder
-        {
-            font-size: 0.8em;
-            position: relative;
-            top: -8;
-            color: #888;
-        } */
 
         /* making an animated floating placeholder https://css-tricks.com/float-labels-css/#aa-more */
         .field
@@ -98,14 +65,16 @@
             margin-bottom: 1em;
         }
 
-        label, /* what is this for */
-        input {
+         label, the label of the input
+        input 
+        {
             transition: all 0.2s;
             touch-action: manipulation;
             width: 200px;
         }
 
-        input {
+        input 
+        {
             font-size: 1.5em;
             border: 0;
             border-bottom: 1px solid #ccc;
@@ -117,31 +86,28 @@
             cursor: text;
         }
 
-        input:focus {
+        input:focus 
+        {
             outline: 0;
             border-bottom: 1px solid #666;
         }
 
-        label {
+        label 
+        {
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            font-size: 10px;
         }
 
-        input:placeholder-shown+label {
+        input:placeholder-shown+label 
+        {
             cursor: text;
             max-width: 70%;
-            /* white-space: nowrap; */
             overflow: hidden;
             text-overflow: ellipsis;
             transform-origin: left bottom;
             transform: translate(0, 1.125rem) scale(0.2);
-            /* transform: translateX(0, 1.1rem) translateY(2, 1.5rem) scale(1.5); */
         }
 
-        /* ::-webkit-input-placeholder {
-            opacity: 1;
-            transition: inherit;
-        } */
 
         input:focus::-webkit-input-placeholder {
             opacity: 1;
@@ -168,7 +134,7 @@
             <li id="timer"><a id="timeDisplay"></a></li>
         </ul>
     </nav>
-    <h1>Enter customer data</h1>
+    <h1>Let's get you all set up!</h1>
 
     <form method="post" action="/insertusers">
         <!-- <label for="username">Username</label><br>
