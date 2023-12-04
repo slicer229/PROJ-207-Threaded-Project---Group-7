@@ -7,12 +7,18 @@
 		body {
 			font-family: "PT Serif";
 			background-image: url("tropwater.webp");
-
+			
 		}
 		#headText {
 			text-align: center;
 			color: white;
 			text-shadow: 0 0 3px black, 0 0 5px black;
+			z-index: 2;
+		}
+		#details {
+			margin-left: 20px;
+			margin-right: 5px;
+			z-index: 2;
 		}
 		#container {
 			display: flex;
@@ -20,8 +26,8 @@
 			margin: 10px;
 			padding: 8px;
 			max-width: 1000px;
-			/*width: 650px;
-			height: 400px;*/
+			z-index: 2;
+			background-image: linear-gradient(45deg, white, white)
 		}
 		#imgContainer{
 			position: relative;
@@ -30,26 +36,32 @@
 			width: 5cm;
 			margin-left: auto;
 			margin-right: auto;
+			z-index: 2;
 		}
 		#image {
 			height: 4.13cm;
 			width: 4.13cm;
 			position: relative;
-			padding: 1mm;
-			border: 1px solid black;
+			border: 2px solid black;
 			margin-left: auto;
 			margin-right: auto;
-		}
-		#details {
-			margin-left: 20px;
-			margin-right: 5px;
+			z-index: 2;
 		}
 		.label2 {
 			color: black;
 			font-weight: bold;
+			z-index: 2;
 		}	
 		button {
 			position: center;
+			z-index: 2;
+		}
+		#stars {
+			color: gold;
+		}
+		#VG {
+			color: #11D60E;
+			font-weight: bold;
 		}
 		/*
 		#destination {
@@ -90,9 +102,10 @@
 		</ul>
 	</nav>
 
-	<h1 id="headText">Vacation Packages</h1>
+	<h1 id="headText">Vacation Packages Available</h1>
 
 	<div id="vaclist">
+
 		<div id="container">
 			<div id="imgContainer"> 
 				<img id="image" src="Koanpool.webp"></br>
@@ -103,15 +116,21 @@
 				<h1>Vacation Package 1</h1>
 					<p id="destination"><div class="label2">Destination: </div>Royal Kona Resort</p>
 					<p><div class="label2" id="flight">Flight: </div>Air Canada</p>
-					<p><div class="label2" id="rating">Rating: </div>★★★★★</p>
+					<p><div class="label2" id="rating">Rating: </div><div id="stars">★★★★★</div></p>
 					<p><div class="label2" id="price">Price: </div>$2,246</p>
 					<p><div class="label2" id="description">Description: </div> 
 						Royal Kona Resort is located near the beach and in a walkable area with good shopping. Kahalu'u Beach Park and Kona Country Club are worth checking out if an activity is on the agenda, while those wishing to experience the area's natural beauty can explore Magic Sands Beach and Kaloko-Honokohau National Historical Park. Don't miss out on a visit to Kona Le'a Plantation. Kayaking and scuba diving offer great chances to get out on the surrounding water, or you can seek out an adventure with hiking/biking trails and ecotours nearby.
 					</p>
-					<p><div class="label2" id="review">Review: </div>Very Good</p> 
+					<p><div class="label2" id="review">Review: </div><div id="VG">Very Good</div></p> 
+					<p><div class="label2" id="addServices">Addition Services: </div> </p>
 				<button type="button">Book</button>
+				<!--Add a feature where you can request for more info, can link to contact and link to an agent.-->
+				<!--Add additional features to add addition services.-->
+				<!--Add hover and roll over functions-->
+				<!---->
 			</div>
 		</div>
+		
 	</div>
 
 </body>
