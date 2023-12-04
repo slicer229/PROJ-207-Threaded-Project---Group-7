@@ -102,7 +102,7 @@ textarea
 /* change text color in my input box to black */
 input[type=text] 
 {
-    color: white;
+    color: black;
 }
 
 /* Light Style for vacation Packages  */
