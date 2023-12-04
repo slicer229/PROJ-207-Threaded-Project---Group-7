@@ -9,6 +9,22 @@
 			background-image: url("tropwater.webp");
 			
 		}
+		/* TO BLUR A IMAGE
+		.background-image {
+			position: absolute;
+			left: 0;
+			right: 0;
+			z-index: 1;
+			display: block;
+			background-image: url('tropwater.webp');
+			width: 1200px;
+			height: 600px;
+			-webkit-filter: blur(5px);
+			-moz-filter: blur(5px);
+			-o-filter: blur(5px);
+			-ms-filter: blur(5px);
+			filter: blur(5px);
+					} */
 		#headText {
 			text-align: center;
 			color: white;
@@ -21,10 +37,11 @@
 			z-index: 2;
 		}
 		#container {
+			position: relative;
 			display: flex;
 			border: 3px solid #000000;
 			margin: 10px;
-			padding: 8px;
+			padding: 15px;
 			max-width: 1000px;
 			z-index: 2;
 			background-image: linear-gradient(45deg, white, white)
@@ -63,25 +80,31 @@
 			color: #11D60E;
 			font-weight: bold;
 		}
+		#G {
+			color: green;
+			font-weight: bold;
+		}
+		#getInfo {
+			color: black;
+		}
 		/*
-		#destination {
-			text-align: center;
+		#hawaii {
+			
+			height: 100px;
+			width: 100px;
+			z-index: -1;
 		}
-		#flight {
-
+		#hwtext {
+		
+			z-index: 1;
+			top: 50%;
+			bottom: 50%;
+			transform: translate(-50%, -50%);
 		}
-		#rating {
-
+		.Hawaii {
+			position:absolute;
 		}
-		#price {
-
-		}
-		#description {
-
-		}
-		#review {
-
-		} */
+		*/
 		
 	</style>
     <meta charset="UTF-8" />
@@ -104,9 +127,13 @@
 
 	<h1 id="headText">Vacation Packages Available</h1>
 
+	<!--<div class="hawaii"><img id="hawaii" src="Hawaii.webp"><p id="hwtext">Hawaii</p></div>-->
+
 	<div id="vaclist">
 
 		<div id="container">
+			
+			<div class="background-image"></div>
 			<div id="imgContainer"> 
 				<img id="image" src="Koanpool.webp"></br>
 				<img id="image" src="Koanpool2.webp"></br>
@@ -122,16 +149,80 @@
 						Royal Kona Resort is located near the beach and in a walkable area with good shopping. Kahalu'u Beach Park and Kona Country Club are worth checking out if an activity is on the agenda, while those wishing to experience the area's natural beauty can explore Magic Sands Beach and Kaloko-Honokohau National Historical Park. Don't miss out on a visit to Kona Le'a Plantation. Kayaking and scuba diving offer great chances to get out on the surrounding water, or you can seek out an adventure with hiking/biking trails and ecotours nearby.
 					</p>
 					<p><div class="label2" id="review">Review: </div><div id="VG">Very Good</div></p> 
-					<p><div class="label2" id="addServices">Addition Services: </div> </p>
+					<p><div class="label2" id="tour">Tour Guide: </div><a>https://www.royalkona.com/plan-your-stay/explore-around-the-big-island</a></p>
 				<button type="button">Book</button>
-				<!--Add a feature where you can request for more info, can link to contact and link to an agent.-->
+				<a href="/contact.html" id="getInfo">
+					<button>Request more information</button>
+				</a>
 				<!--Add additional features to add addition services.-->
 				<!--Add hover and roll over functions-->
-				<!---->
+				<!--Add categories feature, Hawaii, Maldives, etc-->
+				<!--Add -->
+			</div>
+		</div>
+		
+	</div>
+	<div id="vaclist">
+
+		<div id="container">
+			
+			<div class="background-image"></div>
+			<div id="imgContainer"> 
+				<img id="image" src="cinnamon.webp"></br>
+				<img id="image" src="cinnamon2.webp"></br>
+				<img id="image" src="cinnamon3.webp">
+			</div>
+			<div id="details">
+				<h1>Vacation Package 2</h1>
+					<p id="destination"><div class="label2">Destination: </div>Cinnamon Velifushi Maldives</p>
+					<p><div class="label2" id="flight">Flight: </div>West Jet</p>
+					<p><div class="label2" id="rating">Rating: </div><div id="stars">★★★★★</div></p>
+					<p><div class="label2" id="price">Price: </div>$2,396</p>
+					<p><div class="label2" id="description">Description: </div> 
+						Located in Aarah, Cinnamon Velifushi Maldives is by the sea. Thinadhoo Harbor and Felidhoo Harbor are worth checking out if an activity is on the agenda, while those wishing to experience the area's natural beauty can explore Aarah Island and Olhuveli Beach.
+					</p>
+					<p><div class="label2" id="review">Review: </div>
+					<div id="VG">Very Good </div></p> 
+		
+
+					<p><div class="label2" id="tour">Tour Guide: </div><a>https://traveljee.com/destination/asia/maldives/how-to-get-to-cinnamon-velifushi-maldives/</a></p>
+				<button type="button">Book</button>
+				<a href="/contact.html" id="getInfo">
+					<button>Request more information</button>
+				</a>
 			</div>
 		</div>
 		
 	</div>
 
+	<div id="vaclist">
+
+		<div id="container">
+			
+			<div class="background-image"></div>
+			<div id="imgContainer"> 
+				<img id="image" src="mujeres.webp"></br>
+				<img id="image" src="mujeres2.webp"></br>
+				<img id="image" src="mujeres3.webp">
+			</div>
+			<div id="details">
+				<h1>Vacation Package 3</h1>
+					<p id="destination"><div class="label2">Destination: </div>Excellence Playa Mujeres</p>
+					<p><div class="label2" id="flight">Flight: </div>Air Canada</p>
+					<p><div class="label2" id="rating">Rating: </div><div id="stars">★★★★</div></p>
+					<p><div class="label2" id="price">Price: </div>$1,823</p>
+					<p><div class="label2" id="description">Description: </div> 
+						Excellence Playa Mujeres - Adults Only All Inclusive is located in Playa Mujeres, a neighborhood in Punta Sam, and is next to a golf course and on a private beach.
+					</p>
+					<p><div class="label2" id="review">Review: </div><div id="G">Good</div></p> 
+					<p><div class="label2" id="tour">Tour Guide: </div><a>https://www.islandlifemexico.com/cancun-visitors-guide/</a></p>
+				<button type="button">Book</button>
+				<a href="/contact.html" id="getInfo">
+					<button>Request more information</button>
+				</a>
+			</div>
+		</div>
+		
+	</div>
 </body>
 </html>`
