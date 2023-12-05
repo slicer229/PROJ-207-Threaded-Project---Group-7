@@ -105,22 +105,12 @@
             color: #0B92E0;
         }
     </style>
-    <script type="text/javascript" src="getTime.js"></script> 
+    <script type="text/javascript" src="getTime.js"></script>
+	<script type="text/javascript" src="nav.js"></script>
 </head>
-
-<!-- set the header -->
-<body onload="startTime()">
-    <nav>
-        <ul>
-            <li><a href="index">Home</a> </li>
-            <li><a href="registration">Registration</a> </li>
-            <li><a href="vacationPackages">Vacation Packages</a></li>
-            <li><a href="contact"> Contact</a> </li>
-            <li><a href="404"> 404 Page</a></li>
-            <li id="timer"><a id="timeDisplay"></a></li>
-        </ul>
-    </nav>
-    <h1>Let's get you set up!</h1>
+<body onload="navBar(), startTime()">
+    <nav id="navbar"></nav>
+    <h1 style="color:rgb(68, 68, 68)">Let's get you set up!</h1>
 
     <form method="post" action="/insertusers">
         <!-- The username will not be labelled because it is an automatic number that every user gets when signing in-->
@@ -169,7 +159,7 @@
 
         <div class="field">
 
-            <input type="password" id="password" name="password" required />
+            <input type="password" id="password" name="password" placeholder=" " required />
             <label for="password">Password</label>
             <span id="eyeIcon">&#128064</span>
 

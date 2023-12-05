@@ -240,19 +240,10 @@ footer li a:hover {
     }
 </script>
 <script type="text/javascript" src="getTime.js"></script>
+<script type="text/javascript" src="nav.js"></script>
 </head>
-<body onload="startTime()">
-    <nav>
-        <ul>
-            <li><a href="index">Home</a> </li>
-            <li><a href="registration">Registration</a> </li>
-            <li><a href="sample">Sample</a> </li>
-            <li><a href="vacationPackages">Vacation Packages</a></li>
-            <li><a href="contact"> Contact</a> </li>
-            <li><a href="404"> 404 Page</a></li>
-            <li id="timer"><a id="timeDisplay"></a></li>
-        </ul>
-    </nav>
+<body onload="navBar(), startTime()">
+    <nav id="navbar"></nav>
     <header>
         <h1>Contact Us</h1>
     </header>
