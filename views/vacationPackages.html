@@ -126,6 +126,7 @@
 			border: 3px solid rgb(100, 201, 235);
 			border-radius: 50%;
 		}
+		
 		/*
 		#hawaii {
 			
@@ -164,21 +165,54 @@
 		</ul>
 	</nav>
 	
+	<!--
+	<input id="test">
+	<input id="test2">
+	<script>
+		var input_value = "josh";
+		document.getElementById("test").value = input_value;
+	</script>
+	<button onclick="fill()">Fill</button>-->
 
 	<h1 id="headText">Vacation Packages Available</h1>
 
 	<div class="row"> 
 		<div class="column"> 
-			<img id="image2" src="koanhotel.webp">	
+			<img id="image2" onclick="toKoan()" src="koanhotel.webp">	
 		</div>
 		<div class="column">
-			<img id="image2" src="cinnamon2.webp">	
+			<img id="image2" onclick="toCinn()" src="cinnamon2.webp">	
 		</div>
 		<div class="column">
-			<img id="image2" src="mujeres3.webp">	
+			<img id="image2" onclick="toMuje()" src="mujeres3.webp">	
 		</div>
 	</div>
+	<script>
 
+		function toKoan(){
+			divElement = document.querySelector("#flight1");
+ 
+			elemHeight = divElement.clientHeight;
+
+			document.documentElement.scrollTop = elemHeight;
+		}
+		/*
+		function toCinn(){
+			divElement = document.querySelector("#flight2");
+ 
+			elemHeight = divElement.clientHeight;
+
+			document.documentElement.scrollTop = elemHeight;
+		}
+		function toMuje(){
+			divElement = document.querySelector("#flight3");
+ 
+			elemHeight = divElement.clientHeight;
+
+			document.documentElement.scrollTop = elemHeight;
+		}*/
+
+	</script>
 	<div id="vaclist">
 
 		<div id="container">
@@ -191,8 +225,8 @@
 			</div>
 			<div id="details">
 				<h1>Vacation Package 1</h1>
-					<p id="destination"><div class="label2">Destination: </div>Royal Kona Resort</p>
-					<p><div class="label2" id="flight">Flight: </div>Air Canada🍁</p>
+					<p id="destination"><div class="label2" id="koan">Destination: </div>Royal Kona Resort</p>
+					<p><div class="label2" id="flight1">Flight: </div>Air Canada🍁</p>
 					<p><div class="label2" id="rating">Rating: </div><div id="stars">★★★★★</div></p>
 					<p><div class="label2" id="price">Price: </div>$2,246</p>
 					<p><div class="label2" id="description">Description: </div> 
@@ -208,7 +242,7 @@
 				<!--Add hover and roll over functions-->
 				<!--Add categories feature, Hawaii, Maldives, etc-->
 				<!--On whatever category its disaplying, make sure to add an indication maybe the circle hovering or a text saying the category-->
-				
+				<!--Autofill + Top-->
 			</div>
 		</div>
 		
@@ -225,8 +259,8 @@
 			</div>
 			<div id="details">
 				<h1>Vacation Package 2</h1>
-					<p id="destination"><div class="label2">Destination: </div>Cinnamon Velifushi Maldives</p>
-					<p><div class="label2" id="flight">Flight: </div>West Jet🍁</p>
+					<p id="destination"><div class="label2" id="cinn">Destination: </div>Cinnamon Velifushi Maldives</p>
+					<p><div class="label2" id="flight2">Flight: </div>West Jet🍁</p>
 					<p><div class="label2" id="rating">Rating: </div><div id="stars">★★★★★</div></p>
 					<p><div class="label2" id="price">Price: </div>$2,396</p>
 					<p><div class="label2" id="description">Description: </div> 
@@ -259,7 +293,7 @@
 			<div id="details">
 				<h1>Vacation Package 3</h1>
 					<p id="destination"><div class="label2">Destination: </div>Excellence Playa Mujeres</p>
-					<p><div class="label2" id="flight">Flight: </div>Air Canada🍁</p>
+					<p><div class="label2" id="flight3">Flight: </div>Air Canada🍁</p>
 					<p><div class="label2" id="rating">Rating: </div><div id="stars">★★★★</div></p>
 					<p><div class="label2" id="price">Price: </div>$1,823</p>
 					<p><div class="label2" id="description">Description: </div> 
