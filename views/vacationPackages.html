@@ -12,23 +12,6 @@
 			background-position: center;
 			background-attachment: fixed;
 		}
-		
-		/* TO BLUR A IMAGE
-		.background-image {
-			position: absolute;
-			left: 0;
-			right: 0;
-			z-index: 1;
-			display: block;
-			background-image: url('tropwater.webp');
-			width: 1200px;
-			height: 600px;
-			-webkit-filter: blur(5px);
-			-moz-filter: blur(5px);
-			-o-filter: blur(5px);
-			-ms-filter: blur(5px);
-			filter: blur(5px);
-					} */
 		#headText {
 			text-align: center;
 			color: white;
@@ -130,37 +113,19 @@
 			border: 3px solid rgb(100, 201, 235);
 			border-radius: 50%;
 		}
-		
-		/*
-		#hawaii {
 			
-			height: 100px;
-			width: 100px;
-			z-index: -1;
-		}
-		#hwtext {
-		
-			z-index: 1;
-			top: 50%;
-			bottom: 50%;
-			transform: translate(-50%, -50%);
-		}
-		.Hawaii {
-			position:absolute;
-		}
-		*/
-		
 	</style>
     <meta charset="UTF-8" />
     <title>Vacation Packages</title>
-    <link href="lightstyles.css" rel="stylesheet">
+	<link rel="stylesheet" href="lightstyles.css">
 	<script type="text/javascript" src="template.js"></script>
 </head>
 <body onload="navBar(), footer()">
     <nav id="navbar"></nav>
 
 	<h1 id="headText">Vacation Packages Available</h1>
-
+	
+<!--
 	<div class="row"> 
 		<div class="column"> 
 			<img id="image2" onclick="toKoan()" src="koanhotel.webp">	
@@ -172,8 +137,9 @@
 			<img id="image2" onclick="toMuje()" src="mujeres3.webp">	
 		</div>
 	</div>
+-->	
 	<script>
-
+		/*
 		function toKoan(){
 			divElement = document.querySelector("#flight1");
  
@@ -181,7 +147,6 @@
 
 			document.documentElement.scrollTop = elemHeight;
 		}
-		/*
 		function toCinn(){
 			divElement = document.querySelector("#flight2");
  
@@ -196,7 +161,6 @@
 
 			document.documentElement.scrollTop = elemHeight;
 		}*/
-
 	</script>
 	<div id="vaclist">
 
@@ -292,6 +256,7 @@
 				</a>
 			</div>
 		</div>
+		
 	</div>
 	<footer class="containerFoot"></footer>
 </body>
