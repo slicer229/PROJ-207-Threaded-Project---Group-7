@@ -15,15 +15,10 @@ header {
     align-items: center;  
 }
 
-
 h1 {
-    color:black;
-    font-size: 60px;
+    color:white;
+    font-size: 48px;
     text-align: center;
-    -webkit-text-fill-color: white; /* overrides color (regardless of order) */
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 2px;
-    
     
 }
 
@@ -69,11 +64,11 @@ body {
 
 .contact-info {
     flex: 1;
-    border: 2px solid black;
+    border: 5px solid rgb(0, 0, 0)363;
     border-radius: 4px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.3);
-
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 12px;
     color:white;
     
@@ -130,20 +125,47 @@ body {
 }*/
 <!--footer-->
 footer {
+    
     padding: 30px 0;
-}
-footer ul {
+    
+    
+    
+    }
+    
+   
+   
+   footer ul {
     list-style-type: none;
     padding: 0;
     position: relative;
-}
-footer li a {
+   }
+   
+   footer li a {
     color: white;
     text-decoration: none;
-}
-footer li a:hover {
+   }
+   
+   footer li a:hover {
     color: rgb(61, 85, 193);
     text-decoration: none;
+   }
+   .containerFoot {
+    max-width: 100%;
+    max-height: 10%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    color: white;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-radius: 12px 12px 0px 0px;
+    
+    
+    
 }
 .containerFoot {
     max-width: 100%;
@@ -159,76 +181,35 @@ footer li a:hover {
     color: white;
     border-top: 1px solid rgb(0, 0, 0);
     border-radius: 12px 12px 0px 0px;
-    align-items: center;
 }
 
 .text-container {
     float: left;
     padding: 10px;
-    display: flex;
-    justify-content: space-between;
 }
-.text-container ul {
-    list-style-type: none;
-    padding: 0;
-    display: inline-block;
-}
-.fa {
-    padding: 20px;
-    font-size: 50px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
-  }
-  .fa-facebook:hover{
-    color:#3B5998;
-    opacity:0.7
-  }
-  .fa-youtube:hover{
-    color:#bb0000;
-    opacity: 0.7;
-  }
-  .fa-instagram:hover{
-    color:#125688;
-    opacity: 0.7;
-  }
-  
-  
 
 .social-media-icons {
+    float: right;
     padding: 10px;
-    transform: translateX(95px);
 }
 
 .social-media-icons a {
     margin: 0 5px;
     color: white;
     text-decoration: none;
-    height: 100px;
-    width: 100px;
 }
 
-/*.social-media-icons a:hover {
+.social-media-icons a:hover {
     color: rgb(61, 85, 193);
-}*/
+}
 
 .copyright {
     float: right;
     padding: 10px;
-    text-align: center;
-    align-content: center;
-    
-   
 }
-.copyright img{
-    height: 100px;
-    width: 100px;
-    display: flex;
-    margin: auto;
-    
-}
+
+
+
 
 </style>
 <script>
@@ -254,7 +235,7 @@ footer li a:hover {
         </ul>
     </nav>
     <header>
-        <h1>Contact Us</h1>
+        <h1>Contact US</h1>
     </header>
     <div class="container">
         
@@ -272,6 +253,7 @@ footer li a:hover {
                     <label for="phoneNum">&#9743 Phone Number</label>
                     <input type="text" id="phoneNum" name="Phone" placeholder="e.g. 1-(123)-123-1234" pattern="^(\+\d{1,2}\s?)?1?\-?\.?\s?(\()?(\d{3})(?(2)\))[\s.-]?\d{3}[\s.-]?\d{4}$" title="Please enter a valid phone number" required>
                 </div>
+                
                 <div class="form-group">
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="5" placeholder="Type your message" required></textarea>
@@ -291,15 +273,16 @@ footer li a:hover {
             
         </div>
     </div>
-    <br>
-    <br>
     <footer class="containerFoot">
         <div class="text-container">
-        
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#">Vacation Packages</a></li>
+            </ul>
+    
+            <h4>Support</h4>
             <ul>
                 <li><a href="#">Home Page</a></li>
-                <li><a href="#">Vacation Packages</a></li>
-                
                 <li><a href="#">Register/Login</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
@@ -309,10 +292,8 @@ footer li a:hover {
             <a href="#" class="fa fa-youtube"></a>
             <a href="#" class="fa fa-instagram"></a>
         </div>
-        <div class="copyright">
-            <img src="transparent_logo.png" alt="Travel experts logo" />
-            <p>&copy; 2023 Travel Experts LTD. All rights reserved.</p>
-        </div>
+        <div class="copyright">&copy; 2022 Travel Experts LTD. All rights reserved.</div>
     </footer>
+    
 </body>
 </html>

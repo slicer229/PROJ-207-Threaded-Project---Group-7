@@ -11,12 +11,10 @@
 .float-left
 {float: left;}
 /* make clickable websites look pretty */
-h1 {
-    text-align: center;
-}
 * {
     font-family: "Rubik";
 }
+
 /* navigation bar */
 nav ul 
 {
@@ -50,62 +48,117 @@ li a:hover
 {
     background-color: white;
 }
-
 #timeDisplay:hover {
     text-decoration: none;
     background-color: #333;
     color: white;
 } 
 
-body
-{
-    background-color: white;
-    color: black;
+/* headers */
+header {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    color:white;
+    font-size: 48px;
+    text-align: center;
+}
+h2 {
+    text-align: left;
+    font-weight: bolder;
 }
 
-table {
-    width: 25%;
-    }
-
-th, td {
-        border: 1px solid #333;
-        text-align: left;
-    }
-
-th {	
-        background-color: white;
-    }
-
-script
-{
-    color: black;
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
-input
-{
-    background-color: white;
-    color: black;
-    border-color: rgb(0, 0, 0);
-    padding: 5px;
-    margin: 3px;
+.container {
+    max-width: 1100px;
+    max-height: 900px;
+    margin: 0 auto;
+    
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    
+    
+    
+
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 12px;
+    
+}
+.form-container {
+    flex: 1;
+    margin-right: 30px
+   
 }
 
-textarea
-{
-    background-color: white;
+.contact-info {
+    flex: 1;
+    border: 5px solid rgb(0, 0, 0)363;
+    border-radius: 4px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 12px;
+    color:black;
+    
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+
+.form-group button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #111826;
     color: white;
-    border-color: black;
-    padding: 5px;
-    margin: 3px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
 }
 
-/* change text color in my input box to black */
-input[type=text] 
-{
-    color: black;
+.form-group button[type="submit"]:hover {
+    background-color: rgb(61, 85, 193);
+}
+.contact-info div{
+    background-color: grey;
+
+    
+}
+#contact-form{
+    color:white;
 }
 
 /* Light Style for vacation Packages  */
 #container {
     background: linear-gradient(45deg, rgb(255, 255, 255), white)
 }
+

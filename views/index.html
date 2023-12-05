@@ -1,49 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>Welcome to Xplore</title>
     <link href="lightstyles.css" rel="stylesheet">
-    <script type="text/javascript" src="getTime.js"></script> 
+    <script type="text/javascript" src="getTime.js"></script>
 	<style>
 		* {
 			text-align: center;
-			
 		}
 		body {
+			height: 100%;
+		}
+		#bgimg {
 			background-color: black;
+			background-image: url(TravelDay.jpg);
+			filter: blur(4px);
+			resize:none;
+			height: 2000px;
+			width: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			position:absolute;
+			z-index: -1;
+		}
+		.screenbox {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 		.mainbox {
-			margin-top: 0px;
-			margin-right: 10%;
-			margin-left: 10%;
+			width: 900px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
 			background-color: white;
-			
+			box-shadow: 0px 10px 20px black;
 		}
 		.mainbox h1 {
-			background-image: url("Koanpool.webp");
-			background-size: cover;
-			padding-top: 20%;
-			padding-bottom: 5%;
 			font-size: 72px;
 		}
-		#gradHeader {
-			background: -webkit-linear-gradient(144deg, rgba(255,237,0,0.9150035014005602) 0%, rgba(255,169,0,0.8729866946778712) 100%);
+		#headerbg {
+			background-image: url("Koanpool.webp");
+			background-size: cover;
+			width: 100%;
+			height: 600px;
+			position: relative;
+		}
+		#headerbgdark{
+			background: rgba(0, 0, 0, 0.6);
+			margin: 0px;	
+			height: 100%;
+			position: absolute;
+		}
+		#gradientheader {
+			background: -webkit-linear-gradient(144deg, rgb(255, 0, 0) 0%, rgb(243, 215, 0)00%);
 			background-clip:content-box;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			font-weight: bolder;
 			font-style:italic;
-			text-shadow: 2px 2px 5px black;
+			text-shadow: 0px 0px 5px #ff6600;
 		}
-		.mainbox 
-		.logo {
-			width: 20%;
-			height: 20%;
+		.mainbox .logo {
+			width: 40%;
+			height: 40%;
 			border-radius: 100%;
 		}
-		
-		
+		.textbox {
+			padding: 0% 10%;
+		}
+		.textbox h2 {
+			padding-top: 5%;
+			padding-bottom: 2%;
+			font-style: italic;
+			text-align: center;
+			font-size: xx-large;
+			font-style: normal;
+			font-weight: normal;
+			color: rgb(49, 32, 17);
+		}
+		.textbox p {
+			padding-bottom: 10%;
+			font-size:large;
+		}
+		#imagebox1 {
+			height: 500px;
+			background-image: url("koanhotel.webp");
+			width: 100%;
+			height: 500px;
+			background-size: cover;
+		}
 	</style>
 </head>
 <body onload="startTime()">
@@ -58,9 +110,26 @@
 			<li id="timer"><a id="timeDisplay"></a></li>
 		</ul>
 	</nav>
-    <div class="mainbox"><h1><img class="logo" src="Logo.jpg"><br><span id="gradHeader">Welcome to Travel Experts</span></h1>
-	<div>test2</div>
-	<div>test3</div>
+	<div id="bgimg"></div>
+	<div class="screenbox">
+
+    <div class="mainbox">
+		<div id="headerbg">
+			<div id="headerbgdark">
+			<h1><img class="logo" src="transparent_logo.png"><br><span id="gradientheader">Welcome to Travel Experts</span></h1>
+			</div>
+		</div>
+		<div id="imagebox1"></div>
+		<div class="textbox">
+			<h2>Your go-to website for all your vacational needs</h2>
+			<p>
+				With our simple, user-oriented website featuring a hand-picked selection of the best vacation packages from trusted travel agencies, 
+				Booking your dream vacation is just a few clicks away.
+			</p>
+		</div>
+	</div>
+		
+	
 </div>
 	<!--Load in Vacation package from seperate page-->
 </body>
