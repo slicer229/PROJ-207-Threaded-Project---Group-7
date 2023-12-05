@@ -163,57 +163,30 @@ footer {
     color: white;
     border-top: 1px solid rgb(0, 0, 0);
     border-radius: 12px 12px 0px 0px;
-    align-items: center;
     
     
     
 }
+.containerFoot {
+    max-width: 100%;
+    max-height: 10%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    color: white;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-radius: 12px 12px 0px 0px;
+}
+
 .text-container {
     float: left;
     padding: 10px;
-    display: flex;
-    justify-content: space-between;
 }
-.text-container ul {
-    list-style-type: none;
-    padding: 0;
-    display: inline-block;
-}
-.fa {
-    padding: 20px;
-    font-size: 60px;
-    width: 60px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
-  }
- /* .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  .fa-youtube {
-    background: #bb0000;
-    color: white;
-  }
-  .fa-instagram {
-    background: #125688;
-    color: white;
-  }*/
-  .fa-facebook:hover{
-    color:#3B5998;
-    opacity:0.7
-  }
-  .fa-youtube:hover{
-    color:#bb0000;
-    opacity: 0.7;
-  }
-  .fa-instagram:hover{
-    color:#125688;
-    opacity: 0.7;
-  }
-  
-  
 
 .social-media-icons {
     float: right;
@@ -224,23 +197,16 @@ footer {
     margin: 0 5px;
     color: white;
     text-decoration: none;
-    height: 100px;
-    width: 100px;
 }
 
-/*.social-media-icons a:hover {
+.social-media-icons a:hover {
     color: rgb(61, 85, 193);
-}*/
+}
 
 .copyright {
     float: right;
     padding: 10px;
-    text-align: center;
-    
-   
 }
-
-
 
 
 
@@ -307,15 +273,16 @@ footer {
             
         </div>
     </div>
-    <br>
-    <br>
     <footer class="containerFoot">
         <div class="text-container">
-        
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#">Vacation Packages</a></li>
+            </ul>
+    
+            <h4>Support</h4>
             <ul>
                 <li><a href="#">Home Page</a></li>
-                <li><a href="#">Vacation Packages</a></li>
-                
                 <li><a href="#">Register/Login</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
@@ -325,9 +292,8 @@ footer {
             <a href="#" class="fa fa-youtube"></a>
             <a href="#" class="fa fa-instagram"></a>
         </div>
-        <div class="copyright">&copy; 2023 Travel Experts LTD. All rights reserved.</div>
+        <div class="copyright">&copy; 2022 Travel Experts LTD. All rights reserved.</div>
     </footer>
-    
     
 </body>
 </html>
