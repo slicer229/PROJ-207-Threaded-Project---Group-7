@@ -4,7 +4,6 @@
 <head>
     <title>Welcome to Xplore</title>
     <link href="lightstyles.css" rel="stylesheet">
-    <script type="text/javascript" src="getTime.js"></script>
 	<style>
 		* {
 			text-align: center;
@@ -19,7 +18,7 @@
 			resize:none;
 			height: 2000px;
 			width: 100%;
-			background-size: cover;
+			background-size: 2000px;
 			background-repeat: no-repeat;
 			background-position: center;
 			background-attachment: fixed;
@@ -97,19 +96,11 @@
 			background-size: cover;
 		}
 	</style>
+	<script type="text/javascript" src="template.js"></script>
 </head>
-<body onload="startTime()">
-    <nav>
-		<ul>
-			<li><a href="index">Home</a> </li>
-			<li><a href="registration">Registration</a> </li>
-			<li><a href="sample">Sample</a> </li>
-			<li><a href="vacationPackages">Vacation Packages</a></li>
-			<li><a href="contact"> Contact</a> </li>
-			<li><a href="404"> 404 Page</a></li>
-			<li id="timer"><a id="timeDisplay"></a></li>
-		</ul>
-	</nav>
+<body onload="navBar(), footer()">
+    <nav id="navbar"></nav>
+
 	<div id="bgimg"></div>
 	<div class="screenbox">
 
@@ -117,6 +108,17 @@
 		<div id="headerbg">
 			<div id="headerbgdark">
 			<h1><img class="logo" src="transparent_logo.png"><br><span id="gradientheader">Welcome to Travel Experts</span></h1>
+			</div>
+		</div>
+		<div id="homenav">
+			<div class="navbox" id="navbox1">
+				<h2>box1</h2>
+			</div>
+			<div class="navbox" id="navbox2">
+				<h2>box2</h2>
+			</div>
+			<div class="navbox" id="navbox3">
+				<h2>box3</h2>
 			</div>
 		</div>
 		<div id="imagebox1"></div>
@@ -132,5 +134,6 @@
 	
 </div>
 	<!--Load in Vacation package from seperate page-->
+	<footer class="containerFoot" style="transform: translateY(270px)"></footer>
 </body>
 </html>

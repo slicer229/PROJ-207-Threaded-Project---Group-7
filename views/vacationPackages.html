@@ -7,6 +7,10 @@
 		body {
 			font-family: "PT Serif";
 			background-image: url("tropwater.webp");
+			background-size: 2000px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
 		}
 		
 		/* TO BLUR A IMAGE
@@ -150,29 +154,10 @@
     <meta charset="UTF-8" />
     <title>Vacation Packages</title>
     <link href="lightstyles.css" rel="stylesheet">
-	<script type="text/javascript" src="getTime.js"></script>
+	<script type="text/javascript" src="template.js"></script>
 </head>
-<body onload="startTime()">
-    <nav>
-		<ul>
-			<li><a href="index">Home</a> </li>
-			<li><a href="registration">Registration</a> </li>
-			<li><a href="sample">Sample</a> </li>
-			<li><a href="vacationPackages">Vacation Packages</a></li>
-			<li><a href="contact"> Contact</a> </li>
-			<li><a href="404"> 404 Page</a></li>
-			<li id="timer"><a id="timeDisplay"></a></li>
-		</ul>
-	</nav>
-	
-	<!--
-	<input id="test">
-	<input id="test2">
-	<script>
-		var input_value = "josh";
-		document.getElementById("test").value = input_value;
-	</script>
-	<button onclick="fill()">Fill</button>-->
+<body onload="navBar(), footer()">
+    <nav id="navbar"></nav>
 
 	<h1 id="headText">Vacation Packages Available</h1>
 
@@ -307,7 +292,7 @@
 				</a>
 			</div>
 		</div>
-		
 	</div>
+	<footer class="containerFoot"></footer>
 </body>
-</html>`
+</html>
