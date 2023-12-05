@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" , charset="UTF-8">
     <!-- app.use(express.static('public'));     -->
     <link rel="stylesheet" href="lightstyles.css">
+    <script type="text/javascript" src="template.js"></script>
 
     <style>
 
@@ -33,20 +34,20 @@
         form
         {
             /* set the form in the center of the website */
-            margin-left: 30%;
-            margin-right: 30%;
+            margin-left: 20%;
+            margin-right: 20%;
             margin-bottom: 10%;
             /* width: 50%; make the form 50% of the page */
             /* place text and input box of the form in the center of the margin */
             /* text-align: center;             */
             
             /* place the form in the center of the web */
-            position: absolute;
+            /* position: absolute; */
             right: -180px;
             /* transform: translate(-50%, -50%); */
 
-            padding-left: 30%;
-            padding-right: 30%;
+            padding-left: 23%;
+            padding-right: 20%;
             
             padding-top: 5%;
             padding-bottom: 10%;
@@ -120,15 +121,14 @@
 
         h1
         {
-            color: black;
+            color: rgb(69, 69, 69);
         }
 
     </style>
-    <script type="text/javascript" src="template.js"></script>
 </head>
 <body onload="navBar(), footer()">
     <nav id="navbar"></nav>
-    <h1 style="color:rgb(69, 69, 69)">Let's get you set up!</h1>
+    <h1>Let's get you set up!</h1>
 
     <form method="post" action="/insertusers">
 
