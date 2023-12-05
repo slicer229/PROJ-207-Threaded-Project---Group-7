@@ -105,12 +105,11 @@
             color: #0B92E0;
         }
     </style>
-    <script type="text/javascript" src="getTime.js"></script>
-	<script type="text/javascript" src="nav.js"></script>
+    <script type="text/javascript" src="template.js"></script>
 </head>
-<body onload="navBar(), startTime()">
+<body onload="navBar(), footer()">
     <nav id="navbar"></nav>
-    <h1 style="color:rgb(68, 68, 68)">Let's get you set up!</h1>
+    <h1 style="color:rgb(69, 69, 69)">Let's get you set up!</h1>
 
     <form method="post" action="/insertusers">
         <!-- The username will not be labelled because it is an automatic number that every user gets when signing in-->
@@ -188,5 +187,6 @@
         var eyeIcon = document.getElementById("eyeIcon");
         eyeIcon.addEventListener('click', togglePasswordVisibility); 
     </script>
+    <footer class="containerFoot"></footer>
 </body>
 </html>
