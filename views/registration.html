@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" , charset="UTF-8">
     <!-- app.use(express.static('public'));     -->
     <link rel="stylesheet" href="lightstyles.css">
+    <script type="text/javascript" src="template.js"></script>
 
     <style>
 
@@ -13,7 +14,6 @@
         nav
         {
             width: 100%; /* make nav fit the page */
-            /* width: fit-content; */
         }
 
         input 
@@ -27,15 +27,28 @@
             cursor: pointer; /* make the cursor look like you clicking on the icon */
             position: relative;  /* make the position relative to the password input */
             left: 210px; /* place it directly left of the input of the password input */
-            top: 58px; /* place it vertically in the middle of the input box */
+            top: -50px; /* place it vertically in the middle of the input box */
         }
 
 /* CSS for the form */
         form
         {
+            /* set the form in the center of the website */
+            margin-left: 20%;
+            margin-right: 20%;
+            margin-bottom: 10%;
+            /* width: 50%; make the form 50% of the page */
+            /* place text and input box of the form in the center of the margin */
+            /* text-align: center;             */
+            
             /* place the form in the center of the web */
-            padding-left: 30%;
-            padding-right: 30%;
+            /* position: absolute; */
+            right: -180px;
+            /* transform: translate(-50%, -50%); */
+
+            padding-left: 23%;
+            padding-right: 20%;
+            
             padding-top: 5%;
             padding-bottom: 10%;
             /* put line padding around the form */
@@ -47,7 +60,7 @@
         .field
         {
             display: flex; /* make the field a flex field */
-            flex-flow: column-reverse; /* Here the columns are reversed in every div. The animation is a lot harder to make without it for some reason, so I am leaving it here */
+            flex-flow: column; /* Here the columns are reversed in every div. The animation is a lot harder to make without it for some reason, so I am leaving it here */
             margin-bottom: 1.5em; /* make more space at the bottom between each field in the input so that each title is placed closer to its inputs rather than the one on top */
         }
 
@@ -60,27 +73,26 @@
 
         input 
         {
-            font-size: 1.5em;
-            border: 0;
-            border-bottom: 1px solid #ccc;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            -webkit-appearance: none;
-            appearance: none;
-            border-radius: 0;
-            padding: 0;
-            cursor: text;
+            font-size: 1.5em; /* size of the text you type */
+            border: 0; /* remove borders for the input box cause they looks bad */
+            border-bottom: 1px solid gray; /* a small gray border at the bottom and during transormation it will make it a bit bigger and blue */
+            /* font-family: Verdana, Geneva, Tahoma, sans-serif; */ /* doesn't do anything */
+            /* -webkit-appearance: none; */ /* doesn't do anything */
+            /* appearance: none; */ /* doesn't do anything */
+            /* border-radius: 0; */ /* doesn't do anything */
+            /* padding: 0; */ /* doesn't do anything */
+            /* cursor: text; it's already automatically a text cursor */
         }
 
         input:focus 
         {
-            outline: 0;
-            border-bottom: 2px solid #666;
-            border-color: #0B92E0;
+            outline: 0; /* removes the outline around each input box */ 
+            border: 2px solid gray; /* after transition, the border of the input box */
+            border-color: #0B92E0; /* after transition, the color of the border */
         }
 
         label 
         {
-            /* text-transform: uppercase; */
             font-size: 1em; /* text size of the placeholder */
             pointer-events: none; /* this will make the placeholder text have no consequence or event when cursor is placed over it */
             color: #999; /* same color as an input placeholder */
@@ -90,82 +102,91 @@
         input:placeholder-shown+label 
         {
             cursor: text;
-            max-width: 70%;
-            overflow: hidden;
+            max-width: 90px; /* this is the white background of the text when it scrolls up when clicked on the input box */
             text-overflow: ellipsis;
-            transform-origin: bottom;
-            transform: translate(4px, 3.5rem) scale(1);            
+            transform-origin: left top;
+            transform: translate(4px, -2.5rem) scale(1); /* position the placeholder text (left-right, top-bottom), scale(resize) */
         }
 
         /* CSS after the transformation */
         input:not(:placeholder-shown)+label,
         input:focus+label 
         {
-            transform: translate(5px, 17px) scale(0.8);
+            transform: translate(5px, -50px) scale(0.8); /* location and size of text AFTER transformation */
             color: #0B92E0;
+            background-color: white;
+            padding: 0 0px;     
+            text-align: center;       
         }
+
+        h1
+        {
+            color: rgb(69, 69, 69);
+        }
+
     </style>
-    <script type="text/javascript" src="template.js"></script>
 </head>
 <body onload="navBar(), footer()">
     <nav id="navbar"></nav>
-    <h1 style="color:rgb(69, 69, 69)">Let's get you set up!</h1>
+    <h1>Let's get you set up!</h1>
 
     <form method="post" action="/insertusers">
-        <!-- The username will not be labelled because it is an automatic number that every user gets when signing in-->
-        <!-- <label for="username">Username</label>
-        <input type="text" name="username" placeholder="username" />-->
 
-        <div class="field"> 
-            <input type="text" id="lName" name="lName" title="lname" placeholder=" " required />
-            <label for="lName">Last name</label>
-
+        <div class="field"> <p>Name</p>
             <input type="text" id="fName" name="fName" title="firstName" placeholder=" " required />
             <label for="fName">First name</label>
+
+            <input type="text" id="lName" name="lName" title="lname" placeholder=" " required />
+            <label for="lName">Last name</label>
             
-            <p>Name</p> </div><br>
+            </div><br>
 
-        <div class="field"> 
-            <input type="text" id="pPhone" name="pPhone" placeholder=" " required />
-            <label for="pPersonal">Personal #</label>
+        <div class="field"> <p>Contact info</p>
 
-            <input type="text" id="bPhone" name="bPhone" placeholder=" " />
-            <label for="pHome">Business #</label>
-
-            <input type="text" id="email" name="email" placeholder=" " pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required />
+            <input type="text" id="email" name="email" title="email" placeholder=" " pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required />
             <label for="email">Email</label>
 
-        <p>Contact info</p></div><br>
+            <input type="text" id="bPhone" name="bPhone" title="bPhone" placeholder=" " />
+            <label for="pHome">Business #</label>
+
+            <input type="text" id="pPhone" name="pPhone" title="pPhone" placeholder=" " required />
+            <label for="pPersonal">Personal #</label>
+
+
+        </div><br>
         
-        <div class="field">
+        <div class="field"> <p>Address</p>
 
-            <input type="text" id="country" name="country" placeholder=" " required />
-            <label for="country">Country</label>
+            <input type="text" id="address" name="address" title="address" placeholder=" " required />
+            <label for="address">Address</label>
 
-            <input type="text" id="province" name="province" placeholder=" " required />
-            <label for="province">Province</label>
-
-            <input type="text" id="city" name="city" placeholder=" " required />
-            <label for="city">City</label>
-
-            <input type="text" id="postalCode" name="postalCode" placeholder=" " required />
+            <input type="text" id="postalCode" name="postalCode" title="postalCode" placeholder=" " required />
             <label for="postalCode">Postal code</label>
 
-            <input type="text" id="address" name="address" placeholder=" " required />
-            <label for="address">Address</label>
-        
-            <p>Address</p></div><br>
+            <input type="text" id="city" name="city" title="city" placeholder=" " required />
+            <label for="city">City</label>
 
-        <div class="field">
+            <input type="text" id="province" name="province" title="province" placeholder=" " required />
+            <label for="province">Province</label>
+
+            <input type="text" id="country" name="country" title="country" placeholder=" " required />
+            <label for="country">Country</label>
+
+
+
+        
+            </div><br>
+
+        <div class="field"> <p>Username & password</p>
+
+            <input type="text" id="username" name="username" placeholder=" " required ></input>
+            <label for="username">Username</label>
 
             <input type="password" id="password" name="password" placeholder=" " required />
             <label for="password">Password</label>
             <span id="eyeIcon">&#128064</span>
 
-            <input type="text" id="username" name="username" placeholder=" " required ></input>
-            <label for="username">Username</label>
-
-        <p>username & password</p></div><br>
+        </div><br>
         <button type="submit">Create an account</button>
     </form>
     <script>
