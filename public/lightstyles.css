@@ -11,12 +11,10 @@
 .float-left
 {float: left;}
 /* make clickable websites look pretty */
-h1 {
-    text-align: center;
-}
 * {
     font-family: "Rubik";
 }
+
 /* navigation bar */
 nav ul 
 {
@@ -50,44 +48,34 @@ li a:hover
 {
     background-color: white;
 }
-
 #timeDisplay:hover {
     text-decoration: none;
     background-color: #333;
     color: white;
 } 
 
+/* headers */
 header {
-    
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
 }
-
 h1 {
     color:white;
     font-size: 48px;
     text-align: center;
-    
 }
-
-h2{
+h2 {
     text-align: left;
     font-weight: bolder;
 }
-
-
-
 
 body {
     margin: 0;
     padding: 0;
     width: 100%;
 }
-
 
 .container {
     max-width: 1100px;
@@ -108,7 +96,6 @@ body {
     border-radius: 12px;
     
 }
-
 .form-container {
     flex: 1;
     margin-right: 30px
@@ -123,9 +110,10 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
     border: 2px solid rgb(0, 0, 0);
     border-radius: 12px;
-    color:white;
+    color:black;
     
 }
+
 
 .form-group {
     margin-bottom: 20px;
