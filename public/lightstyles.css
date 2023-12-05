@@ -2,6 +2,7 @@
 
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 /* font-family: "Rubik";   ^^^
 
 /* *****reminder: put button in navbar to toggle dark mode/light mode*****  */
@@ -62,7 +63,7 @@ header {
     align-items: center;
 }
 h1 {
-    color:white;
+    color:black;
     font-size: 48px;
     text-align: center;
 }
@@ -162,3 +163,104 @@ body {
     background: linear-gradient(45deg, rgb(255, 255, 255), white)
 }
 
+/* footer */
+footer {
+    padding: 30px 0;
+}
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+}
+footer li a {
+    color: white;
+    text-decoration: none;
+}
+footer li a:hover {
+    color: rgb(61, 85, 193);
+    text-decoration: none;
+}
+.containerFoot {
+    max-width: 100%;
+    max-height: 10%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    color: white;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-radius: 12px 12px 0px 0px;
+    align-items: center;
+}
+
+.text-container {
+    float: left;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.text-container ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+}
+.fa {
+    padding: 20px;
+    font-size: 50px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  .fa-facebook:hover{
+    color:#3B5998;
+    opacity:0.7
+  }
+  .fa-youtube:hover{
+    color:#bb0000;
+    opacity: 0.7;
+  }
+  .fa-instagram:hover{
+    color:#125688;
+    opacity: 0.7;
+  }
+  
+  
+
+.social-media-icons {
+    padding: 10px;
+    transform: translateX(95px);
+}
+
+.social-media-icons a {
+    margin: 0 5px;
+    color: white;
+    text-decoration: none;
+    height: 100px;
+    width: 100px;
+}
+
+/*.social-media-icons a:hover {
+    color: rgb(61, 85, 193);
+}*/
+
+.copyright {
+    float: right;
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+    
+   
+}
+.copyright img {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    margin: auto;
+    
+}
