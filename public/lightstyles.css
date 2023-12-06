@@ -17,6 +17,11 @@
 }
 
 /* navigation bar */
+#navtitle {
+    color: white;
+    font-style: italic;
+    text-shadow: 2px 2px 2px black;
+}
 nav ul 
 {
     display:flex;
@@ -44,6 +49,9 @@ nav li a
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    background-color: #333;
+    transition: 0.3s;
+
 }
 li a:hover 
 {
