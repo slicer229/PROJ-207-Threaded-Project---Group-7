@@ -33,7 +33,6 @@
 /* CSS for the form */
         form
         {
-            margin-right: 2%;
             padding-left: 5%;
             padding-right: 5%;
             padding-top: 5%;
@@ -127,6 +126,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            transform:translateY(-80px);
+        }
+        .img-container 
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction:column;
+            width: 100%;
         }
 
         /* make images small and pretty */
@@ -142,7 +150,7 @@
 		body {
 			font-family: "PT Serif";
 			background-image: url("tropwater.webp");
-			background-size: 2000px;
+			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
 			background-attachment: fixed;
@@ -231,7 +239,7 @@
             <button type="submit">Create an account</button>
         </form>
 
-        <div class="img-container">
+        <div class="img-container" style="position:relative">
             <img id="rightImg" src="businessRestaurant.jpeg" alt="People in restaurant" class="form-image">
             <img id="rightImg" src="amazonForestPeople.jpeg" alt="People in the Amazon Forest" class="form-image">
             <img id="rightImg" src="maldives.jpg" alt="The beach" class="form-image">
