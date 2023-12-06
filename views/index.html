@@ -16,9 +16,9 @@
 			background-image: url(TravelDay.jpg);
 			filter: blur(4px);
 			resize:none;
-			height: 2000px;
+			min-height: 2330px;
 			width: 100%;
-			background-size: 2000px;
+			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
 			background-attachment: fixed;
@@ -81,44 +81,41 @@
 
 		.navbox {
 			transition: 0.3s;
+			filter:brightness(50%);
+			color: black;
+			text-shadow: 2px 2px 2px black;
+			height: inherit;
 		}
 		#navbox1 {
-			background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("hawaii.webp");
-			filter:brightness(100%);
+			background: url("./homepage_files/telephone.png");
+			background-size: cover;
+			width: 25%;
 		}
 		#navbox2 {
-			background-image: url("hawaii.webp");
+			background: url("hawaii.webp");
+			background-size: cover;
 			width: 50%;
-			height: inherit;
 		}
 		#navbox3 {
-			background-image: url("hawaii.webp");
+			background: url("./homepage_files/register.png");
+			background-size: 100%;
 			width: 25%;
-			height: inherit;
+			
 		}
-		#navbox1:hover {
-			background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-				/* bottom, image */
+		.navbox h2 {
+			text-align: center;
+		}
+		.navbox:hover {
+			background-image: url("hawaii.webp");
+			filter: brightness(100%);
+			color: white;
+			}
+		.navbox h2:hover {
+			color: white;
+		}
 
-		}
-		#navbox2:hover {
-			background: linear-gradient(
-				rgba(0, 0, 0, 0.7), 
-				rgba(0, 0, 0, 0.7)
-				),
-				/* bottom, image */
-				url("hawaii.webp");
-		}
-		#navbox3:hover {
-			background: linear-gradient(
-				rgba(0, 0, 0, 0.7), 
-				rgba(0, 0, 0, 0.7)
-				),
-				/* bottom, image */
-				url("hawaii.webp");
-		}
 		
-
+		
 		.textbox {
 			padding: 0% 10%;
 		}
@@ -159,15 +156,14 @@
 			</div>
 		</div>
 		<div id="homenav">
-			<div class="navbox" id="navbox1">
-				<h2>box1</h2>
-				<button>Go</button>
+			<div class="navbox" id="navbox1" onclick="window.open('contact')">
+				<h2>Contact</h2>
 			</div>
-			<div class="navbox" id="navbox2">
-				<h2>box2</h2>
+			<div class="navbox" id="navbox2" onclick="window.open('vacationPackages')">
+				<h2>Browse Packages</h2>
 			</div>
-			<div class="navbox" id="navbox3">
-				<h2>box3</h2>
+			<div class="navbox" id="navbox3" onclick="window.open('registration')">
+				<h2>Registration</h2>
 			</div>
 		</div>
 		<div id="imagebox1"></div>
