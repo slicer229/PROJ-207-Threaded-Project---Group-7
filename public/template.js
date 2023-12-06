@@ -18,7 +18,7 @@ function startTime()
 function navBar(){
     const navhtml = `
             <ul>
-                <li><h1 id="navtitle">Travel Experts</h1></li>
+                <li><img id="navlogo" src="transparent_logo.png"></li>
                 <li><a href="index">Home</a></li>
                 <li><a href="registration">Registration</a> </li>
                 <li><a href="vacationPackages">Vacation Packages</a></li>

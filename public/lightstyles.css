@@ -17,10 +17,11 @@
 }
 
 /* navigation bar */
-#navtitle {
+#navlogo {
     color: white;
     font-style: italic;
-    text-shadow: 2px 2px 2px black;
+    filter:drop-shadow(2px 2px 2px black);
+    width: 100px;
 }
 nav ul 
 {
@@ -39,19 +40,24 @@ nav ul li
     list-style-type:none;
     margin-right:-4px;
     padding:10px;
-    border-right:1px solid white;
+
     flex: 1;
 }
 nav li a 
 {
-    display: block;
+    display: flex;
+    height: 100%;
+    font-size: large;
+    font-weight: bold;
+    letter-spacing: 2px;
+    align-items: center;
+    justify-content: center;
     color: white;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     background-color: #333;
     transition: 0.3s;
-
+    
 }
 li a:hover 
 {
