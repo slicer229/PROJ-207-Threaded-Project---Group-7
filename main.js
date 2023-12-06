@@ -1,3 +1,4 @@
+const sql = require("mysql");
 const fs = require("fs");
 const path = require("path")
 const express = require("express")
@@ -19,19 +20,19 @@ app.get("/", (req, res) => {
 });
 
 // insert new - for creating users
-
-app.post("/insertusers", (req, res) => {
-    console.log(req.body);
-    var conn = mysql.createConnection({
+function getConnection(){
+    return mysql.createConnection({
         host: "localhost",
         user: "amitOOSD",
         password: "password",
         database: "proj7DataBase"
-    });
+    }); 
+}
 
+app.post("/insertusers", (req, res) => {
+    console.log(req.body);
     conn.connect((err) => {
         if (err) throw err;
-
         var sql = "INSERT INTO `users` (`cxUserID`, `cxFirstName`, `cxLastName`, `cxEmail`, `cxPPhone`, `cxBPhone`, `cxAddress`, `cxCity`, `cxProv`, `cxCountry`, `cxPostalCode`, `cxPassword`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
         var data = [req.body.cxUserID, req.body.cxFirstName, req.body.cxLastName, req.body.cxEmail, req.body.cxPPhone, req.body.cxBPhone, req.body.cxAddress, req.body.cxCity, req.body.cxProv, req.body.cxCountry, req.body.cxPostalCode, req.body.cxPassword];
         console.log(data);
@@ -58,7 +59,7 @@ app.post("/insertusers", (req, res) => {
             }
         });
     });
-// };
+ });
 
 // end of creating users
 
@@ -70,5 +71,4 @@ app.get('*', (req, res) => {
 app.listen(8000, (err) => {
     if (err) throw err;
     console.log("server started on port 8000");
-});
 });
