@@ -27,33 +27,24 @@
             cursor: pointer; /* make the cursor look like you clicking on the icon */
             position: relative;  /* make the position relative to the password input */
             left: 210px; /* place it directly left of the input of the password input */
-            top: -50px; /* place it vertically in the middle of the input box */
+            bottom: 50px; /* place it vertically in the middle of the input box */
         }
 
 /* CSS for the form */
         form
         {
-            /* set the form in the center of the website */
-            margin-left: 20%;
-            margin-right: 20%;
-            margin-bottom: 10%;
-            /* width: 50%; make the form 50% of the page */
-            /* place text and input box of the form in the center of the margin */
-            /* text-align: center;             */
-            
-            /* place the form in the center of the web */
-            /* position: absolute; */
-            right: -180px;
-            /* transform: translate(-50%, -50%); */
-
-            padding-left: 23%;
-            padding-right: 20%;
-            
+            margin-right: 2%;
+            padding-left: 5%;
+            padding-right: 5%;
             padding-top: 5%;
-            padding-bottom: 10%;
+            padding-bottom: 5%;
             /* put line padding around the form */
             border: 2px solid #ccc; /* border line is 2px thick */
             background-color: #f2f2f2; /* make the form color a slightly different shade of white */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         /* making an animated floating placeholder https://css-tricks.com/float-labels-css/#aa-more */
@@ -62,6 +53,7 @@
             display: flex; /* make the field a flex field */
             flex-flow: column; /* Here the columns are reversed in every div. The animation is a lot harder to make without it for some reason, so I am leaving it here */
             margin-bottom: 1.5em; /* make more space at the bottom between each field in the input so that each title is placed closer to its inputs rather than the one on top */
+            
         }
 
         label, input /* the label of any input */
@@ -76,12 +68,6 @@
             font-size: 1.5em; /* size of the text you type */
             border: 0; /* remove borders for the input box cause they looks bad */
             border-bottom: 1px solid gray; /* a small gray border at the bottom and during transormation it will make it a bit bigger and blue */
-            /* font-family: Verdana, Geneva, Tahoma, sans-serif; */ /* doesn't do anything */
-            /* -webkit-appearance: none; */ /* doesn't do anything */
-            /* appearance: none; */ /* doesn't do anything */
-            /* border-radius: 0; */ /* doesn't do anything */
-            /* padding: 0; */ /* doesn't do anything */
-            /* cursor: text; it's already automatically a text cursor */
         }
 
         input:focus 
@@ -124,71 +110,139 @@
             color: rgb(69, 69, 69);
         }
 
+        #note
+        {
+            white-space: nowrap;  /* make the disclaimer at the top of the form not wrap */
+
+        }
+
+        #notePoint
+        {
+            text-indent: 50px; /* indent the bullet points in the disclaimer */
+        }
+  
+        /* put the images on either side of the form */
+        .form-container 
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* make images small and pretty */
+        .form-image 
+        {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@1,100&display=swap');
+		body {
+			font-family: "PT Serif";
+			background-image: url("tropwater.webp");
+			background-size: 2000px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+		}
+
+        #headText {
+			text-align: center;
+			color: white;
+			text-shadow: 0 0 3px black, 0 0 5px black;
+			z-index: 2;
+		}
+
     </style>
+
 </head>
 <body onload="navBar(), footer()">
+    
     <nav id="navbar"></nav>
-    <h1>Let's get you set up!</h1>
 
-    <form method="post" action="/insertusers">
+    <h1 id="headText">Register for free for exclusive deals!</h1>
 
-        <div class="field"> <p>Name</p>
-            <input type="text" id="fName" name="fName" title="firstName" placeholder=" " required />
-            <label for="fName">First name</label>
+    <div class="form-container">
 
-            <input type="text" id="lName" name="lName" title="lname" placeholder=" " required />
-            <label for="lName">Last name</label>
+        <div class="img-container">
+            <img id="leftImg" src="kidsPlayingInSand.jpeg" alt="Kids playing in the sand" class="form-image">
+            <img id="leftImg" src="IndiaElephantRide.jpeg" alt="People riding elephants in India" class="form-image">
+            <img id="leftImg" src="goldHarold.jpeg" alt="Harold playing gold" class="form-image">
+            <img id="leftImg" src="akropolis.jpg.webp" alt="The akropolis" class="form-image">
+            <img id="leftImg" src="rockeyMountainsPeopleHiking.jpeg" alt="People hiking in the Rockey Mountains" class="form-image">
+            <img id="leftImg" src="koanpool2.webp" alt="Koan pool" class="form-image">
+            <img id="leftImg" src="mujeres.webp" alt="Mujeres" class="form-image">
+        </div>
+
+        <form method="post" action="/insertusers">
+            <div id="note">
+                <p> <u><strong>Note:</strong></u><br>
+                This registration form is <strong>not mandatory</strong> to purchase a vacation package from TravelExperts. 
+                <br>The perks of signing up are: </p>
+                <p id="notePoint">1. Exclusive members discounts.</p>
+                <p id="notePoint">2. Better search recommendations taylored to your taste.</p>
+                <p id="notePoint">3. An assigned travel agent who will always be the same person to answer your question over email or contact page</p>
+            </div><br><br>
+                <div class="field"> <p>Name</p>
+                <input type="text" id="fName" name="fName" title="firstName" placeholder=" " required />
+                <label for="fName">First name</label>
+    
+                <input type="text" id="lName" name="lName" title="lname" placeholder=" " required />
+                <label for="lName">Last name</label>
+            </div><br>
+    
+            <div class="field"> <p>Contact info</p>
+                <input type="text" id="email" name="email" title="email" placeholder=" " pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required />
+                <label for="email">Email</label>
+    
+                <input type="text" id="pPhone" name="pPhone" title="pPhone" placeholder=" " required />
+                <label for="pPersonal">Personal #</label>
+            </div><br>
             
+            <div class="field"> <p>Address</p>
+                <input type="text" id="address" name="address" title="address" placeholder=" " required />
+                <label for="address">Address</label>
+    
+                <input type="text" id="postalCode" name="postalCode" title="postalCode" placeholder=" " required />
+                <label for="postalCode">Postal code</label>
+                <p id="postalCodeEx" style="margin-top: -22px; margin-bottom: 22px; color: gray;">Ex. N1N-1N1</p>
+    
+                <input type="text" id="city" name="city" title="city" placeholder=" " required />
+                <label for="city">City</label>
+    
+                <input type="text" id="province" name="province" title="province" placeholder=" " required />
+                <label for="province">Province</label>
+    
+                <input type="text" id="country" name="country" title="country" placeholder=" " required />
+                <label for="country">Country</label>
             </div><br>
-
-        <div class="field"> <p>Contact info</p>
-
-            <input type="text" id="email" name="email" title="email" placeholder=" " pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required />
-            <label for="email">Email</label>
-
-            <input type="text" id="bPhone" name="bPhone" title="bPhone" placeholder=" " />
-            <label for="pHome">Business #</label>
-
-            <input type="text" id="pPhone" name="pPhone" title="pPhone" placeholder=" " required />
-            <label for="pPersonal">Personal #</label>
-
-
-        </div><br>
-        
-        <div class="field"> <p>Address</p>
-
-            <input type="text" id="address" name="address" title="address" placeholder=" " required />
-            <label for="address">Address</label>
-
-            <input type="text" id="postalCode" name="postalCode" title="postalCode" placeholder=" " required />
-            <label for="postalCode">Postal code</label>
-
-            <input type="text" id="city" name="city" title="city" placeholder=" " required />
-            <label for="city">City</label>
-
-            <input type="text" id="province" name="province" title="province" placeholder=" " required />
-            <label for="province">Province</label>
-
-            <input type="text" id="country" name="country" title="country" placeholder=" " required />
-            <label for="country">Country</label>
-
-
-
-        
+    
+            <div class="field"> <p>Username & password</p>
+                <input type="text" id="username" name="username" placeholder=" " required ></input>
+                <label for="username">Username</label>
+    
+                <input type="password" id="password" name="password" placeholder=" " required />
+                <label for="password">Password</label>
+                <span id="eyeIcon">&#128064</span>
             </div><br>
+            <!-- <input type="checkbox" id="robot" name="robot" style="margin-right: 0px;">I am not a robot</input> -->
+            <button type="submit">Create an account</button>
+        </form>
 
-        <div class="field"> <p>Username & password</p>
+        <div class="img-container">
+            <img id="rightImg" src="businessRestaurant.jpeg" alt="People in restaurant" class="form-image">
+            <img id="rightImg" src="amazonForestPeople.jpeg" alt="People in the Amazon Forest" class="form-image">
+            <img id="rightImg" src="maldives.jpg" alt="The beach" class="form-image">
+            <img id="rightImg" src="akihabara.jpeg" alt="Akihabara" class="form-image">
+            <img id="rightImg" src="akropolis.jpg.webp" alt="Akropolis" class="form-image">
+            <img id="rightImg" src="Koanpool.webp" alt="Koan pool" class="form-image">
+            <img id="rightImg" src="mujeres2.webp" alt="Mujeres" class="form-image">
+        </div>
 
-            <input type="text" id="username" name="username" placeholder=" " required ></input>
-            <label for="username">Username</label>
+    </div>
 
-            <input type="password" id="password" name="password" placeholder=" " required />
-            <label for="password">Password</label>
-            <span id="eyeIcon">&#128064</span>
-
-        </div><br>
-        <button type="submit">Create an account</button>
-    </form>
     <script>
         function togglePasswordVisibility() 
         {
