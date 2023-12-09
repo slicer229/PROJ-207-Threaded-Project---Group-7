@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		
+		@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@1,100&display=swap');
+		body {
+			font-family: "PT Serif";
+			background-image: url("tropwater.webp");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+		}
+		button {
+			height: 50px;
+			width: 200px;
+			color: blue;
+			background-color: lightblue;
+			border-radius: 20%
+		}
+		button:hover {
+			background-color: rgb(73, 205, 249);
+		}
+		#book {
+			width: 80px;
+		}
+		#headText {
+			text-align: center;
+			color: black;
+			text-shadow: 0 0 3px white, 0 0 5px white;
+			z-index: 2;
+			margin: 50px;
+			font-weight: bold;
+			/*padding: 20px;
+			background-color: white;
+			border: 4px solid black;*/
+		}
+		#details {
+			margin-left: 20px;
+			margin-right: 5px;
+			z-index: 2;
+			width: 100%;
+		}
+		
+		#container {
+			position: relative;
+			display: flex;
+			border: 3px solid #000000;
+			margin: 10px;
+			padding: 15px;
+			width: 95%;
+			height: 55%;
+			background-color: red;
+		}
+
+		#imgContainer{
+			position: relative;
+			padding: 1mm;
+			height: 10cm;
+			width: 5cm;
+			margin-left: auto;
+			margin-right: auto;
+			z-index: 2;
+		}
+		#image {
+			height: 4.85cm;
+			width: 4.85cm;
+			position: relative;
+			border: 2px solid black;
+			margin-left: auto;
+			margin-right: auto;
+			z-index: 2;
+		}
+		.label2 {
+			color: black;
+			font-weight: bold;
+			z-index: 2;
+		}	
+		button {
+			position: center;
+			z-index: 2;
+		}
+		#stars {
+			color: gold;
+		}
+		#VG {
+			color: #11D60E;
+			font-weight: bold;
+		}
+		#G {
+			color: green;
+			font-weight: bold;
+		}
+		#getInfo {
+			color: black;
+		}
+		#cImages{
+			height: 100px;
+			width: 100px;
+			top: 10px;
+		}
+		#categories {
+			margin: 15px;
+			padding: 15px;
+		}
+
+		.column {
+			float: left;
+			width: 33.33%;
+			padding: 5px;
+			position: center;
+		}
+		.row {
+			padding: 20px;
+			float: left;
+			
+            
+		}
+		.row::after {
+			content: "";
+			clear: both;
+			display: table;
+			position: center;
+		}
+		#image2 {
+			clip-path: circle(); /*makes image a circle*/
+			height: 90px;
+			width: 90px;
+		}
+		#image2:hover {
+			border: 3px solid rgb(100, 201, 235);
+			border-radius: 50%;
+		}
+			
+	</style>
+    <meta charset="UTF-8" />
+    <title>Vacation Packages</title>
+	<link rel="stylesheet" href="lightstyles.css">
+	<script type="text/javascript" src="template.js"></script>
+</head>
+<body onload="navBar(), footer()">
+    <nav id="navbar"></nav>
+
+	<h1 id="headText">Vacation Packages Available</h1>
+	
+<!-- Categories for phase 2
+	<div class="row"> 
+		<div class="column"> 
+			<img id="image2" onclick="toKoan()" src="koanhotel.webp">	
+		</div>
+		<div class="column">
+			<img id="image2" onclick="toCinn()" src="cinnamon2.webp">	
+		</div>
+		<div class="column">
+			<img id="image2" onclick="toMuje()" src="mujeres3.webp">	
+		</div>
+	</div>
+-->	
+	<div id="vaclist">
+
+		<div id="container">
+			
+			
+			<div id="imgContainer"> 
+				<img id="image" src="Koanpool.webp"></br>
+				<img id="image" src="Koanpool2.webp"></br>
+				<img id="image" src="koanhotel.webp">
+			</div>
+			<div id="details">
+				<h1>Package 1</h1>
+					<p id="destination"><div class="label2" id="koan">Destination: </div>Royal Kona Resort</p>
+					<p><div class="label2" id="flight1">Flight: </div>Air Canada🍁</p>
+					<p><div class="label2" id="rating">Rating: </div><div id="stars">★★★★★</div></p>
+					<p><div class="label2" id="price">Price: </div>$2,246</p>
+					<p><div class="label2" id="description">Description: </div> 
+						Royal Kona Resort is located near the beach and in a walkable area with good shopping. Kahalu'u Beach Park and Kona Country Club are worth checking out if an activity is on the agenda, while those wishing to experience the area's natural beauty can explore Magic Sands Beach and Kaloko-Honokohau National Historical Park. Don't miss out on a visit to Kona Le'a Plantation.
+					</p>
+					<p><div class="label2" id="review">Amenities: </div><div>All-inclusive ♾️ • Pool 🏊‍♂️  • Bar 🍸 </br></br>Restaurant 🍴 • Room Service ☎ • Breakfast 🍽️</div></p> 
+					<p><div class="label2" id="tour">Tour Guide: </div><a href="https://www.royalkona.com/plan-your-stay/explore-around-the-big-island">https://www.royalkona.com/plan-your-stay/explore-around-the-big-island</a></p>
+				<button type="button" id="book">Book</button>
+				<a href="/contact.html" id="getInfo">
+					<button>Request more information</button>
+				</a>
+				<!--Add additional features to add addition services. OR Amenities reference: expedia-->
+				<!--Add hover and roll over functions-->
+				<!--Add categories feature, Hawaii, Maldives, etc-->
+				<!--On whatever category its disaplying, make sure to add an indication maybe the circle hovering or a text saying the category-->
+				<!--Autofill + Top-->
+				<!--Better layout if there's time-->
+			</div>
+		</div>
+		
+	</div>
+	<div id="vaclist">
+
+		<div id="container">
+			
+			<div class="background-image"></div>
+			<div id="imgContainer"> 
+				<img id="image" src="cinnamon.webp"></br>
+				<img id="image" src="cinnamon2.webp"></br>
+				<img id="image" src="cinnamon3.webp">
+			</div>
+			<div id="details">
+				<h1>Package 2</h1>
+					<p id="destination"><div class="label2" id="cinn">Destination: </div>Cinnamon Velifushi Maldives</p>
+					<p><div class="label2" id="flight2">Flight: </div>West Jet🍁</p>
+					<p><div class="label2" id="rating">Rating: </div><div id="stars">★★★★★</div></p>
+					<p><div class="label2" id="price">Price: </div>$2,396</p>
+					<p><div class="label2" id="description">Description: </div> 
+						Located in Aarah, Cinnamon Velifushi Maldives is by the sea. Thinadhoo Harbor and Felidhoo Harbor are worth checking out if an activity is on the agenda, while those wishing to experience the area's natural beauty can explore Aarah Island and Olhuveli Beach.
+					</p>
+					<p><div class="label2" id="review">Amenities: </div><div>All-inclusive ♾️ • Pool 🏊‍♂️  • Bar 🍸 </br></br>Restaurant 🍴 • Room Service ☎ • Breakfast 🍽️</div></p> 
+					<p><div class="label2" id="tour">Tour Guide: </div><a href="https://traveljee.com/destination/asia/maldives/how-to-get-to-cinnamon-velifushi-maldives/">https://traveljee.com/destination/asia/maldives/how-to-get-to-cinnamon-velifushi-maldives/</a></p>
+				<button type="button" id="book">Book</button>
+				<a href="/contact.html" id="getInfo">
+					<button>Request more information</button>
+				</a>
+			</div>
+		</div>
+		
+	</div>
+
+	<div id="vaclist">
+
+		<div id="container">
+			
+			<div class="background-image"></div>
+			<div id="imgContainer"> 
+				<img id="image" src="mujeres.webp"></br>
+				<img id="image" src="mujeres2.webp"></br>
+				<img id="image" src="mujeres3.webp">
+			</div>
+			<div id="details">
+				<h1>Package 3</h1>
+					<p id="destination"><div class="label2">Destination: </div>Excellence Playa Mujeres</p>
+					<p><div class="label2" id="flight3">Flight: </div>Air Canada🍁</p>
+					<p><div class="label2" id="rating">Rating: </div><div id="stars">★★★★</div></p>
+					<p><div class="label2" id="price">Price: </div>$1,823</p>
+					<p><div class="label2" id="description">Description: </div> 
+						
+Excellence Playa Mujeres - Adults Only All Inclusive is situated in Playa Mujeres, a neighborhood in Punta Sam, adjacent to a golf course and boasting a private beach, countless entertainment, offering a perfect setting for an exclusive and all-inclusive getaway.
+					</p>
+					<p><div class="label2" id="review">Amenities: </div><div>All-inclusive ♾️ • Pool 🏊‍♂️  • Bar 🍸 </br></br>Restaurant 🍴 • Room Service ☎ • Breakfast 🍽️</div></p> 
+					<p><div class="label2" id="tour">Tour Guide: </div><a href="https://www.islandlifemexico.com/cancun-visitors-guide/">https://www.islandlifemexico.com/cancun-visitors-guide/</a></p>
+				<button type="button" id="book">Book</button>
+				<a href="/contact.html" id="getInfo">
+					<button>Request more information</button>
+				</a>
+			</div>
+		</div>
+		
+	</div>
+	<footer class="containerFoot"></footer>
+</body>
+</html>

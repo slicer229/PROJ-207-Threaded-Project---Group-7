@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- this is my change - Amit -->
+	<!-- change number two -->
+	<title>Welcome Sample</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" , charset="UTF-8">
+	<link rel="stylesheet" href="lightstyles.css"> <!--do not put directory in href-->
+<!-- 					*******should we delete this -Lance*******
+		set header
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+
+			const promiseOfSomeData = fetch('header.html')
+				.then(response => response.text())
+				.then(html => {
+					return html;
+				})
+			window.onload = async () => {
+				let someData = await promiseOfSomeData;
+				document.getElementById('header-container').innerHTML = someData;
+				console.log("onload");
+			};
+		});
+
+	</script>
+	    <div id="header-container" onload="startTime()"></div> -->
+</head>
+<script type="text/javascript" src="getTime.js"></script> 
+<body onload="startTime()">
+	<nav>
+		<ul>
+			<li><a href="index">Home</a> </li>
+			<li><a href="registration">Registration</a> </li>
+			<li><a href="sample">Sample</a> </li>
+			<li><a href="vacationPackages">Vacation Packages</a></li>
+			<li><a href="contact"> Contact</a> </li>
+			<li><a href="404"> 404 Page</a></li>
+			<li id="timer"><a id="timeDisplay"></a></li>
+		</ul>
+		
+	</nav>
+	<h1 style="text-align: center; font-weight: bold; letter-spacing: 10px;">Sample page for testing CSS</h1>
+	
+	<br>
+	<h2 style="font-weight: bold">Headers</h2>
+	<h1>Header 1</h1>
+	<h2>Header 2</h2>
+	<h3>Header 3</h3>
+	
+	<h2>Paragraph</h2>
+	<p>
+		The Phantom, exterior like fish eggs 
+		The interior like suicide-wrist red 
+		I can exercise you, this can be your Phys. Ed
+		Cheat on your man ma, that's how you get ahizzead
+		Killer wit the beat, I know killers in the street
+		Wit' the steel that'll make you feel like Chinchilla in the heat
+		So don't try to run up on my ear talking all that raspy shit
+		Trying to ask me shit
+	</p>
+
+	<h2>Sample List</h2>
+	<div id="list1">
+		<ul>
+			<li>Fruit</li>
+			<li>Orange</li>
+			<li>Apple</li>
+			<li>Banana</li>
+		</ul>
+	</div>
+
+	<h2>Sample Table</h2>
+	<div id="table1">
+		<table>
+			<tr>
+				<td>Burgers</td></br>
+				<td>Fries</td></br>
+				<td>Chicken</td></br>
+			</tr>
+		</table>
+	</div>
+
+	<h3>Sample Form</h3>
+	<form method="post" id="form1">
+		<textarea name="message" placeholder="Enter your message here" id="f1text"></textarea>
+		<button type="submit">Submit the blogpost</button>
+	</form>
+	<script src="footer.js"></script>
+</body>
+
+</html>
