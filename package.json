@@ -2,6 +2,7 @@
   "dependencies": {
     "dayjs": "^1.11.10",
     "express": "^4.18.2",
+    "mysql": "^2.18.1",
     "nodemon": "^3.0.2"
   },
   "name": "proj207_threaded_project_-_group-7",

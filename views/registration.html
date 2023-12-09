@@ -165,6 +165,8 @@
 
     </style>
 
+    
+
 </head>
 <body onload="navBar(), footer()">
     
@@ -204,9 +206,17 @@
             <div class="field"> <p>Contact info</p>
                 <input type="text" id="email" name="email" title="email" placeholder=" " value="a" pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required />
                 <label for="email">Email</label>
+                <span id="emailError" style="color: red; display: none;">Invalid email format</span>
     
-                <input type="text" id="pPhone" name="pPhone" title="pPhone" placeholder=" " value="a" required />
-                <label for="pPersonal">Personal #</label>
+                <input type="text" id="pPhone" name="pPhone" title="pPhone" placeholder=" 
+                "pattern="(^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$    |
+                            ^[1-9]\d{2}-\d{3}-\d{4}                             |
+                            ^\(\d{3}\)\s\d{3}-\d{4}                             |
+                            ^[1-9]\d{2}\s\d{3}\s\d{4}                           |
+                            ^[1-9]\d{2}\.\d{3}\.\d{4})" required />
+                <label for="pPersonal">Phone num</label>
+                <span id="phoneError" style="color: red; display: none;">Invalid phone format</span>
+
             </div><br>
             
             <div class="field"> <p>Address (optional)</p>
@@ -267,8 +277,34 @@
                 eyeIcon.innerHTML = "&#128064";
             }
         }
+
         var eyeIcon = document.getElementById("eyeIcon");
         eyeIcon.addEventListener('click', togglePasswordVisibility); 
+
+
+// email regex
+        document.getElementById('email').addEventListener('input', function (e) {
+        var pattern = new RegExp(e.target.pattern);
+        var emailError = document.getElementById('emailError');
+        if (pattern.test(e.target.value)) {
+            emailError.style.display = 'none';
+        } else {
+            emailError.style.display = 'block';
+        }
+});
+
+
+// phone regex
+    document.getElementById('pPhone').addEventListener('input', function (e) {
+    var pattern = new RegExp(e.target.pattern);
+    var phoneError = document.getElementById('phoneError');
+    if (pattern.test(e.target.value)) {
+        phoneError.style.display = 'none';
+    } else {
+        phoneError.style.display = 'block';
+    }
+});
+
     </script>
     <footer class="containerFoot"></footer>
 </body>
