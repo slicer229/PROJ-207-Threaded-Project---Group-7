@@ -20,10 +20,9 @@ function navBar(){
             <ul>
                 <li><img id="navlogo" src="transparent_logo.png"></li>
                 <li><a href="index">Home</a></li>
-                <li><a href="registration">Registration</a> </li>
+                <li><a href="login">Login</a> </li>
                 <li><a href="vacationPackages">Vacation Packages</a></li>
                 <li><a href="contact">Contact</a></li>
-                <li><a href="#">Login</a></li>
                 <li id="timer"><a id="timeDisplay"></a></li>
             </ul>`
     document.getElementById("navbar").innerHTML = navhtml;
@@ -36,7 +35,7 @@ function footer(){
             <ul>
                 <li><a href="index">Home Page</a></li>
                 <li><a href="vacationPackages">Vacation Packages</a></li>
-                <li><a href="registration">Register/Login</a></li>
+                <li><a href="login">Login</a></li>
                 <li><a href="contact">Contact Us</a></li>
             </ul>
         </div>
