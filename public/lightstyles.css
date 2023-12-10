@@ -17,11 +17,15 @@
 }
 
 /* navigation bar */
-#navlogo {
+.navlogo img {
     color: white;
     font-style: italic;
     filter:drop-shadow(2px 2px 2px black);
-    width: 100px;
+    width: 150px;
+    padding: -50px -50px;
+}
+#navlogo a:hover {
+    background-color:transparent;
 }
 nav ul 
 {
