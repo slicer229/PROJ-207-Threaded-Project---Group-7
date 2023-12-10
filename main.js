@@ -84,12 +84,10 @@ app.use(express.urlencoded({
 
 app.listen(8000, err => {
     if (err) throw err;
-    console.log("server started");
+    console.log("server started on port 8000");
 });
 
-// trying to make my html see my header, but it's not working. https://stackoverflow.com/questions/70161685/css-not-loading-with-node-js-and-express 
-// app.use(express.static('amyroseart/a6'));
-
+// START Create Username (Registration page)
 
 app.post("/insertusers", (req, res) => {
     console.log(req.body);
@@ -120,6 +118,42 @@ app.post("/insertusers", (req, res) => {
         });
     });
 });
+
+// END Create User (Registration page)
+
+// START Create Message (Contact page)
+
+app.post("/insertcontactMessage", (req, res) => {
+    console.log(req.body);
+    var conn = mysql.createConnection({
+        host: "localhost",
+        user: "amitOOSD",
+        password: "password",
+        database: "proj7DataBase"
+    });
+
+    conn.connect((err) => {
+        if (err) throw err;
+        var sql = "INSERT INTO `contactMessage` (`cxFullName`, `cxEmail`, `cxPPhone`, `cxContactMessage`) VALUES (?,?,?,?)";
+        var data = [req.body.cxFullName, req.body.cxEmail, req.body.cxPPhone, req.body.cxContactMessage];
+
+        console.log(data);
+        conn.query({ sql: sql, values: data }, (err, result) => {
+            if (err) throw err;
+            console.log(result);
+
+
+            if (result.affectedRows) {
+                res.sendFile(__dirname + "/views/confirmation.html");
+            }
+            else {
+                res.sendFile(__dirname + "/views/404.html");
+            }
+        });
+    });
+});
+
+// End Create Message (Contact page)
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/views/index.html");
