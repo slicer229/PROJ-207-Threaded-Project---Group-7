@@ -2,15 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-/* font-family: "Rubik";   ^^^
+/* font-family: "Rubik";   ^^^     */
 
 /* *****reminder: put button in navbar to toggle dark mode/light mode*****  */
 /* FOR PHASE 2 ^*/
 
 /* make clickable websites float left instead of down */
-.float-left
-{float: left;}
-/* make clickable websites look pretty */
+.float-left {
+    float: left;
+}
+
 * {
     font-family: "Rubik";
 }
@@ -19,16 +20,17 @@
 .navlogo img {
     color: white;
     font-style: italic;
-    filter:drop-shadow(2px 2px 2px black);
+    filter: drop-shadow(2px 2px 2px black);
     width: 150px;
     padding: -50px -50px;
 }
+
 #navlogo a:hover {
-    background-color:transparent;
+    background-color: transparent;
 }
-nav ul 
-{
-    display:flex;
+
+nav ul {
+    display: flex;
     flex-direction: row;
     align-content: stretch;
     justify-content: center;
@@ -38,15 +40,15 @@ nav ul
     overflow: hidden;
     background-color: #333;
 }
-nav ul li 
-{
-    list-style-type:none;
-    margin-right:-4px;
+
+nav ul li {
+    list-style-type: none;
+    margin-right: -4px;
     text-align: center;
     flex: 1;
 }
-nav li a 
-{
+
+nav li a {
     display: flex;
     height: 100%;
     font-size: large;
@@ -55,22 +57,22 @@ nav li a
     align-items: center;
     justify-content: center;
     color: white;
-    padding: 14px 16px;
     text-decoration: none;
     background-color: #333;
     transition: 0.3s;
-    
+
 }
-li a:hover 
-{
+
+li a:hover {
     background-color: white;
     text-decoration: none;
 }
+
 #timeDisplay:hover {
     text-decoration: none;
     background-color: #333;
     color: white;
-} 
+}
 
 body {
     margin: 0;
@@ -78,6 +80,7 @@ body {
     width: 100%;
     background-color: #333;
 }
+
 /* headers */
 header {
     height: 200px;
@@ -85,11 +88,12 @@ header {
     justify-content: center;
     align-items: center;
 }
+
 h1 {
-    color:black;
     font-size: 48px;
     text-align: center;
 }
+
 h2 {
     text-align: left;
     font-weight: bolder;
@@ -99,33 +103,23 @@ h2 {
     max-width: 1100px;
     max-height: 900px;
     margin: 0 auto;
-    
+
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.3);
-    
-    
-    
+
+
+
 
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.7);
     display: flex;
     flex-wrap: wrap;
-    
+
     border: 2px solid rgb(0, 0, 0);
     border-radius: 12px;
-    
+
 }
 
-.contact-info {
-    flex: 1;
-    border: 5px solid rgb(0, 0, 0)363;
-    border-radius: 4px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 12px;
-    color:black;
-    
-}
+
 
 
 .form-group {
@@ -144,7 +138,7 @@ h2 {
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
-    
+
 }
 
 .form-group button[type="submit"] {
@@ -161,43 +155,46 @@ h2 {
 .form-group button[type="submit"]:hover {
     background-color: rgb(61, 85, 193);
 }
-.contact-info div{
+
+.contact-info div {
     background-color: grey;
 
-    
+
 }
-#contact-form{
-    color:white;
+
+#contact-form {
+    color: white;
 }
 
 /* footer */
 footer {
     padding: 30px 0;
 }
+
 footer ul {
     list-style-type: none;
     padding: 0;
     position: relative;
 }
+
 footer li a {
     color: white;
     text-decoration: none;
 }
+
 footer li a:hover {
     color: rgb(61, 85, 193);
     text-decoration: none;
 }
+
 .containerFoot {
     max-width: 100%;
     max-height: 10%;
     width: 100%;
-    margin: 0 auto;
-    padding: 20px;
     background-color: rgba(0, 0, 0, 0.4);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
-    flex-wrap: wrap;
     color: white;
     border-top: 1px solid rgb(0, 0, 0);
     border-radius: 12px 12px 0px 0px;
@@ -210,11 +207,13 @@ footer li a:hover {
     display: flex;
     justify-content: space-between;
 }
+
 .text-container ul {
     list-style-type: none;
     padding: 0;
     display: inline-block;
 }
+
 .fa {
     padding: 20px;
     font-size: 50px;
@@ -223,21 +222,24 @@ footer li a:hover {
     text-decoration: none;
     margin: 5px 2px;
     border-radius: 50%;
-  }
-  .fa-facebook:hover{
-    color:#3B5998;
-    opacity:0.7
-  }
-  .fa-youtube:hover{
-    color:#bb0000;
+}
+
+.fa-facebook:hover {
+    color: #3B5998;
+    opacity: 0.7
+}
+
+.fa-youtube:hover {
+    color: #bb0000;
     opacity: 0.7;
-  }
-  .fa-instagram:hover{
-    color:#125688;
+}
+
+.fa-instagram:hover {
+    color: #125688;
     opacity: 0.7;
-  }
-  
-  
+}
+
+
 
 .social-media-icons {
     padding: 10px;
@@ -248,7 +250,6 @@ footer li a:hover {
     margin: 0 5px;
     color: white;
     text-decoration: none;
-    height: 100px;
     width: 100px;
 }
 
@@ -261,13 +262,14 @@ footer li a:hover {
     padding: 10px;
     text-align: center;
     align-content: center;
-    
-   
+
+
 }
+
 .copyright img {
     height: 100px;
     width: 100px;
     display: flex;
     margin: auto;
-    
+    filter: drop-shadow(1px 1px 1px black);
 }

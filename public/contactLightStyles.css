@@ -7,12 +7,10 @@ header {
 
 
 h1 {
-    color:black;
+    color:white;
     font-size: 60px;
     text-align: center;
-    -webkit-text-fill-color: white; /* overrides color (regardless of order) */
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 2px;
+    text-shadow: 0 0 5px black;
     
     
 }
@@ -26,7 +24,8 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
-    background: url("maldives.jpg")  no-repeat center fixed;
+    background: url("maldives.jpg") no-repeat center fixed;
+    background-size: cover;
     width: 100%;
 }
 

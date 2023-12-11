@@ -1,0 +1,189 @@
+/* CSS for the header. */
+nav {
+    width: 100%;
+    /* Make nav fit the page. */
+}
+
+/* CSS for the icon on the right of the password input. */
+#eyeCon {
+    cursor: pointer;
+    /* Make the cursor looks like you clicking on the icon instead of typing. */
+    position: relative;
+    /* Make the position relative to the password input. */
+    left: 210px;
+    /* Place it directly left of the input of the password input. */
+    bottom: 50px;
+    /* Place it vertically in the middle of the input box. */
+}
+
+form {
+/* The form is the main part of the page. It should be in the center as much as possible. */
+    /* I could have just used padding instead of pad-left,right,top,bottom, but in case I want to change the padding later, I have this. */
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /* Line padding around the form. */
+    border: 2px solid #ccc;
+    /* Border line is 2px thick. */
+    background-color: #f2f2f2;
+    /* Make the form color a slightly different shade of white. */
+    display: flex;
+    /* Flex display: makes the form easier to control. */
+    flex-direction: column;
+    /* So that the input boxes will go down instead of on the side. */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Making an animated floating placeholder https://css-tricks.com/float-labels-css/#aa-more */
+.field {
+    display: flex;
+    /* Make the field a flex field. */
+    flex-flow: column;
+    /* So that the animation will go down instead of on the side. */
+    margin-bottom: 1.5em;
+    /* Make more space at the bottom between each field in the input so that each title is placed closer to its inputs rather than the one on top. */
+
+}
+
+input {
+/* Text/style of the input + the box. */
+    color: black;
+    /* Make password circles black. */
+    font-size: 1.5em;
+    /* Size of the text you type. */
+    border: 0;
+    /* Remove borders for the input box cause they looks bad. */
+    border-bottom: 1px solid gray;
+    /* A small gray border at the bottom and during transormation it will make it a bit bigger and blue. */
+}
+
+input:focus {
+/* Whenever an input is focused (in our case when it's clicked on), the following will happen. */
+    outline: 0;
+    /* Removes the outline around each input box. */
+    border: 2px solid gray;
+    /* After transition, the border of the input box. */
+    border-color: #0B92E0;
+    /* After transition, the color of the border. */
+}
+
+label,
+input {
+/* Label of the inputs. */
+    transition: all 0.3s;
+    /* Time of transition. I really like 0.25s, but I don't want to be too extra. */
+    touch-action: manipulation;
+    /* Transition by touch. */
+    width: 200px;
+    /* Size of the input box. Make it a bit bigger than normal for the text above.*/
+}
+
+/* CSS before the transformation (when the placeholder is shown in the correct placeholder spot). */
+input:placeholder-shown+label {
+    cursor: text;
+    /* Text cursor for when placed on the placeholder */
+    max-width: 100px;
+    /* This is the transparent background of the text when it scrolls up when clicked on the input box. This is to place it in the right location when clicked on before text */
+    transform-origin: left top;
+    /* The origin of the transformation (when clicked on input) is the top left of the input box. */
+    transform: translate(4px, -2.5rem) scale(1);
+    /* Position the placeholder text (left-right, top-bottom), scale(resize). */
+}
+
+/* CSS after the transformation: this is AFTER the input:focus CSS code. The placeholders leave their original locations. */
+input:not(:placeholder-shown)+label,
+input:focus+label {
+    transform: translate(0px, -50px) scale(0.8); /* Location and size of text AFTER transformation. */
+    
+    color: #0B92E0;  /* Color of the text is blue. */
+   
+    background-color: transparent; /* We don't want background color. */
+    
+    padding-right: 15px;
+    text-align: center; /* After the transformation, if there's text in the input box, place the text in the center of the input box. */
+    
+}
+
+label {
+    font-size: 1em;
+    /* Text size of the placeholder. */
+    pointer-events: none;
+    /* This will make the placeholder text have no consequence or event when cursor is placed over it. */
+    color: #999;
+    /* Same color as an input placeholder. */
+}
+
+h1 {
+    /* The best colour for head. */
+    color: rgb(69, 69, 69);
+}
+
+#note {
+    white-space: nowrap;
+    /* Make the disclaimer at the top of the form not wrap. */
+}
+
+#notePoint {
+    text-indent: 50px;
+    /* Indent the bullet points in the disclaimer. */
+}
+
+/* Put the images on either side of the form. */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-80px);
+}
+
+/* make images small and pretty */
+.form-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@1,100&display=swap');
+
+body {
+    background-image: url("tropwater.webp");
+    /* Make website look like its from 2004 using ocean water background. */
+    background-size: cover;
+    /* Cover all of the background. For some reason it doesn't cover the sides if I don't add this.*/
+}
+
+#headText {
+    /* Make my headline in front of the images so the images aren't in front of it when minimizing the webpage. */
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+    /* Center the headline. */
+    color: white;
+    text-shadow: 0 0 3px black, 0 0 5px black;
+    /* Cool styling */
+}
+
+#emailError, #phoneError /* refer to id of both errors */
+{
+    display: none; /* hide the error message  at first unless one of the err function is working*/
+    color: red;
+}
+#postalCodeEx
+{
+    color: gray;
+    margin-top: -22px;
+    margin-bottom: 22px;
+}

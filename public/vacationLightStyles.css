@@ -3,7 +3,7 @@
 body {
     font-family: "PT Serif";
     background-image: url("tropwater.webp");
-    background-size: 2000px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -31,8 +31,8 @@ button:hover {
 
 #headText {
     text-align: center;
-    color: black;
-    text-shadow: 0 0 3px white, 0 0 5px white;
+    color: white;
+    text-shadow: 0 0 5px black;
     z-index: 2;
     margin: 50px;
     font-weight: bold;

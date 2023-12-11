@@ -1,3 +1,5 @@
+// JS File for making default elements for each page
+
 function startTime() 
 {
     const today = new Date();
