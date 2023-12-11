@@ -52,7 +52,7 @@ nav li a {
     display: flex;
     height: 100%;
     font-size: x-large;
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 2px;
     align-items: center;
     justify-content: center;
@@ -62,7 +62,9 @@ nav li a {
     transition: 0.3s;
 
 }
-
+#timeDisplay {
+    font-weight: bold;
+}
 li a:hover {
     color: #333;
     background-color: white;
