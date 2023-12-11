@@ -1,3 +1,5 @@
+// JS File for making default elements for each page
+
 function startTime() 
 {
     const today = new Date();
@@ -18,7 +20,7 @@ function startTime()
 function navBar(){
     const navhtml = `
             <ul>
-                <li><img id="navlogo" src="transparent_logo.png"></li>
+                <li class="navlogo" id="navlogo"><a href=index><img src="transparent_logo.png"></a></li>
                 <li><a href="index">Home</a></li>
                 <li><a href="login">Login</a> </li>
                 <li><a href="vacationPackages">Vacation Packages</a></li>
@@ -34,8 +36,8 @@ function footer(){
         <div class="text-container">
             <ul>
                 <li><a href="index">Home Page</a></li>
-                <li><a href="vacationPackages">Vacation Packages</a></li>
                 <li><a href="login">Login</a></li>
+                <li><a href="vacationPackages">Vacation Packages</a></li>
                 <li><a href="contact">Contact Us</a></li>
             </ul>
         </div>
