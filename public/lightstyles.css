@@ -65,6 +65,7 @@ nav li a
 li a:hover 
 {
     background-color: white;
+    text-decoration: none;
 }
 #timeDisplay:hover {
     text-decoration: none;

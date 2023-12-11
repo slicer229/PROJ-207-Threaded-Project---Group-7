@@ -2,27 +2,26 @@
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-    <title>Welcome to Xplore</title>
-    <link href="lightstyles.css" rel="stylesheet"> <!--Universal Stylesheet-->
-	<link href="indexlight.css" rel="stylesheet"> <!-- Index.html-specific stylesheet-->
-	<script type="text/javascript" src="template.js"></script> <!-- Default HTML Elements for every page (navigation bar, footer)-->
+    <title>Welcome to Xplore</title> <!-- Tab Title -->
+    <link href="lightstyles.css" rel="stylesheet"> <!--Universal Stylesheet -->
+	<link href="indexlight.css" rel="stylesheet"> <!-- Page-specific stylesheet -->
+	<script type="text/javascript" src="template.js"></script> <!-- Default HTML Elements for every page (navigation bar, footer) -->
 </head>
-<body onload="navBar(), footer()"> <!--Get navigation bar/footer on page load-->
-    <nav id="navbar"></nav> <!--Navigation Bar-->
+<body onload="navBar(), footer()"> <!--Get navigation bar/footer on page load -->
+    <nav id="navbar"></nav> <!--Navigation Bar -->
 
-	<div id="bgimg"></div>  <!--Background Image-->
+	<div id="bgimg"></div>  <!--Background Image -->
 
 	<div class="screenbox"> <!--Whole screen container - used to center .mainbox -->
 
-    <div class="mainbox"> <!--Main content container-->
-		<div id="headerbg"></div> <!--Background for content header -->	
-		<div id="logobg"></div>
-		<h1 style="position: absolute; top: 200px; width: 900px">
-			<span id="gradientheader">Welcome to:</span>
-			<img class="logo" src="transparent_logo.png">
-			
+    <div class="mainbox"> <!--Main content container - slim design to support mobile usage -->
+		<div id="headerbg"></div> <!--Header Background -->	
+		<h1> <!-- Header Container -->
+			<span id="gradientheader">Welcome to:</span> <!-- Header Text -->
+			<img class="logo" src="transparent_logo.png"> <!-- Header Logo -->
 		</h1>
-		<div id="homenav">
+		
+		<div id="homenav"> <!-- Interactable Navigation Menu Container - clicking opens in new tab -->
 			<div class="navbox" id="navbox3" onclick="window.open('registration')">
 				<h2>Register</h2>
 			</div>
@@ -33,19 +32,18 @@
 				<h2>Contact</h2>
 			</div>
 		</div>
-		<div id="imagebox1"></div>
-		<div class="textbox">
+
+		<div class="textbox"> <!-- Page Description -->
 			<h2>Your go-to website for all your vacational needs</h2>
 			<p>
-				With our simple, user-oriented website featuring a hand-picked selection of the best vacation packages from trusted travel agencies, 
+				With our simple, user-oriented website featuring a hand-picked 
+				selection of the best vacation packages from trusted travel agencies, 
 				Booking your dream vacation is just a few clicks away.
 			</p>
 		</div>
+		<div id="imagebox1"></div> <!-- Image from Vacation package; //// reminder to design carousel later on -->
 	</div>
-		
-	
 </div>
-	<!--Load in Vacation package from seperate page-->
-	<footer class="containerFoot" style="position: relative; bottom: -265px;"></footer>
+<footer class="containerFoot"></footer> <!-- Default Footer -->
 </body>
 </html>
