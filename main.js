@@ -2,7 +2,7 @@ const mysql = require('mysql'); // Implementation still WIP
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const ejs = require('ejs');
+const ejs = require('ejs'); // Not used (yet)
 
 
 const app = express();
