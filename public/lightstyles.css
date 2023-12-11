@@ -64,6 +64,7 @@ nav li a {
 }
 
 li a:hover {
+    color: #333;
     background-color: white;
     text-decoration: none;
 }

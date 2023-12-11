@@ -36,8 +36,8 @@ function footer(){
         <div class="text-container">
             <ul>
                 <li><a href="index">Home Page</a></li>
-                <li><a href="vacationPackages">Vacation Packages</a></li>
                 <li><a href="login">Login</a></li>
+                <li><a href="vacationPackages">Vacation Packages</a></li>
                 <li><a href="contact">Contact Us</a></li>
             </ul>
         </div>
