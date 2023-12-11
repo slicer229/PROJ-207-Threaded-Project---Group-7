@@ -13,7 +13,7 @@ function startTime()
         {m = "0" + m}
     if (s<10)
         {s= "0" + s}
-    document.getElementById('timeDisplay').innerHTML = h + ":" + m + ":" + s + "   " + mts + "." + d + "." + y;
+    document.getElementById('timeDisplay').innerHTML = h + ":" + m + ":" + s + "<br>" + mts + "." + d + "." + y;
     setTimeout(startTime, 1000);
 }
 
