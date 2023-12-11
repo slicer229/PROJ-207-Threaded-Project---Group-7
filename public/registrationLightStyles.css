@@ -10,9 +10,9 @@ nav {
     /* Make the cursor looks like you clicking on the icon instead of typing. */
     position: relative;
     /* Make the position relative to the password input. */
-    left: 210px;
+    left: 225px;
     /* Place it directly left of the input of the password input. */
-    bottom: 50px;
+    bottom: 55px;
     /* Place it vertically in the middle of the input box. */
 }
 
@@ -53,7 +53,6 @@ input {
     padding: 10px 10px 10px 5px;
     color: black;
     /* Make password circles black. */
-    font-size: 1.5em;
     /* Size of the text you type. */
     border: 0;
     /* Remove borders for the input box cause they looks bad. */
@@ -79,6 +78,7 @@ input {
     touch-action: manipulation;
     /* Transition by touch. */
     width: 200px;
+    height: 1.5em;
     /* Size of the input box. Make it a bit bigger than normal for the text above.*/
 }
 
@@ -137,7 +137,6 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(-80px);
 }
 
 /* make images small and pretty */
