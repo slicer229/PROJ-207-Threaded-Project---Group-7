@@ -49,6 +49,8 @@ form {
 
 input {
 /* Text/style of the input + the box. */
+/* bring the placeholder text a bit lower */
+    padding: 10px 10px 10px 5px;
     color: black;
     /* Make password circles black. */
     font-size: 1.5em;
