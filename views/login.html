@@ -9,148 +9,136 @@
     <script type="text/javascript" src="template.js"></script>
 
     <style>
-        /* CSS for the header */
+        /* CSS for the header. */
         nav {
             width: 100%;
-            /* make nav fit the page */
+            /* Make nav fit the page. */
         }
 
-        input {
-            color: black;
-            /* make password circles black */
-        }
-
-        /* CSS for the icon on the right of the password input */
-        #eyeIcon {
+        /* CSS for the icon on the right of the password input. */
+        #eyeCon {
             cursor: pointer;
-            /* make the cursor look like you clicking on the icon */
+            /* Make the cursor looks like you clicking on the icon instead of typing. */
             position: relative;
-            /* make the position relative to the password input */
+            /* Make the position relative to the password input. */
             left: 210px;
-            /* place it directly left of the input of the password input */
+            /* Place it directly left of the input of the password input. */
             bottom: 50px;
-            /* place it vertically in the middle of the input box */
+            /* Place it vertically in the middle of the input box. */
         }
 
-        /* CSS for the form */
         form {
+        /* The form is the main part of the page. It should be in the center as much as possible. */
+            /* I could have just used padding instead of pad-left,right,top,bottom, but in case I want to change the padding later, I have this. */
             padding-left: 5%;
             padding-right: 5%;
             padding-top: 5%;
             padding-bottom: 5%;
-            /* put line padding around the form */
+            /* Line padding around the form. */
             border: 2px solid #ccc;
-            /* border line is 2px thick */
+            /* Border line is 2px thick. */
             background-color: #f2f2f2;
-            /* make the form color a slightly different shade of white */
+            /* Make the form color a slightly different shade of white. */
             display: flex;
+            /* Flex display: makes the form easier to control. */
             flex-direction: column;
+            /* So that the input boxes will go down instead of on the side. */
             justify-content: center;
             align-items: center;
         }
 
-        /* making an animated floating placeholder https://css-tricks.com/float-labels-css/#aa-more */
+        /* Making an animated floating placeholder https://css-tricks.com/float-labels-css/#aa-more */
         .field {
             display: flex;
-            /* make the field a flex field */
+            /* Make the field a flex field. */
             flex-flow: column;
-            /* Here the columns are reversed in every div. The animation is a lot harder to make without it for some reason, so I am leaving it here */
+            /* So that the animation will go down instead of on the side. */
             margin-bottom: 1.5em;
-            /* make more space at the bottom between each field in the input so that each title is placed closer to its inputs rather than the one on top */
+            /* Make more space at the bottom between each field in the input so that each title is placed closer to its inputs rather than the one on top. */
 
+        }
+
+        input {
+        /* Text/style of the input + the box. */
+            color: black;
+            /* Make password circles black. */
+            font-size: 1.5em;
+            /* Size of the text you type. */
+            border: 0;
+            /* Remove borders for the input box cause they looks bad. */
+            border-bottom: 1px solid gray;
+            /* A small gray border at the bottom and during transormation it will make it a bit bigger and blue. */
+        }
+
+        input:focus {
+        /* Whenever an input is focused (in our case when it's clicked on), the following will happen. */
+            outline: 0;
+            /* Removes the outline around each input box. */
+            border: 2px solid gray;
+            /* After transition, the border of the input box. */
+            border-color: #0B92E0;
+            /* After transition, the color of the border. */
         }
 
         label,
         input
 
-        /* the label of any input */
+        /* Label of the inputs. */
             {
-            transition: all 0.2s;
-            /* time of transition */
+            transition: all 0.3s;
+            /* Time of transition. I really like 0.25s, but I don't want to be too extra. */
             touch-action: manipulation;
-            /* transition */
+            /* Transition by touch. */
             width: 200px;
-            /* size of the input box */
+            /* Size of the input box. Make it a bit bigger than normal for the text above.*/
         }
 
-        input {
-            font-size: 1.5em;
-            /* size of the text you type */
-            border: 0;
-            /* remove borders for the input box cause they looks bad */
-            border-bottom: 1px solid gray;
-            /* a small gray border at the bottom and during transormation it will make it a bit bigger and blue */
+        /* CSS before the transformation (when the placeholder is shown in the correct placeholder spot). */
+        input:placeholder-shown+label {
+            cursor: text;
+            /* Text cursor for when placed on the placeholder */
+            max-width: 100px;
+            /* This is the transparent background of the text when it scrolls up when clicked on the input box. This is to place it in the right location when clicked on before text */
+            transform-origin: left top;
+            /* The origin of the transformation (when clicked on input) is the top left of the input box. */
+            transform: translate(4px, -2.5rem) scale(1);
+            /* Position the placeholder text (left-right, top-bottom), scale(resize). */
         }
 
-        input:focus {
-            outline: 0;
-            /* removes the outline around each input box */
-            border: 2px solid gray;
-            /* after transition, the border of the input box */
-            border-color: #0B92E0;
-            /* after transition, the color of the border */
+        /* CSS after the transformation: this is AFTER the input:focus CSS code. The placeholders leave their original locations. */
+        input:not(:placeholder-shown)+label,
+        input:focus+label {
+            transform: translate(5px, -50px) scale(0.8);
+            /* Location and size of text AFTER transformation. */
+            color: #0B92E0;
+            /* Color of the text is blue. */
+            background-color: transparent;
+            /* We don't want background color. */
+            padding-right: 15px;
+            text-align: center;
+            /* After the transformation, if there's text in the input box, place the text in the center of the input box. */
         }
 
         label {
             font-size: 1em;
-            /* text size of the placeholder */
+            /* Text size of the placeholder. */
             pointer-events: none;
-            /* this will make the placeholder text have no consequence or event when cursor is placed over it */
+            /* This will make the placeholder text have no consequence or event when cursor is placed over it. */
             color: #999;
-            /* same color as an input placeholder */
-        }
-
-        /* CSS before the transformation */
-        input:placeholder-shown+label {
-            cursor: text;
-            max-width: 90px;
-            /* this is the white background of the text when it scrolls up when clicked on the input box */
-            text-overflow: ellipsis;
-            transform-origin: left top;
-            transform: translate(4px, -2.5rem) scale(1);
-            /* position the placeholder text (left-right, top-bottom), scale(resize) */
-        }
-
-        /* CSS after the transformation */
-        input:not(:placeholder-shown)+label,
-        input:focus+label {
-            transform: translate(5px, -50px) scale(0.8);
-            /* location and size of text AFTER transformation */
-            color: #0B92E0;
-            background-color: white;
-            padding: 0 0px;
-            text-align: center;
+            /* Same color as an input placeholder. */
         }
 
         h1 {
+            /* The best colour for head. */
             color: rgb(69, 69, 69);
         }
 
-        #note {
-            white-space: nowrap;
-            /* make the disclaimer at the top of the form not wrap */
-
-        }
-
-        #notePoint {
-            text-indent: 50px;
-            /* indent the bullet points in the disclaimer */
-        }
-
-        /* put the images on either side of the form */
+        /* Put the images on either side of the form. */
         .form-container {
             display: flex;
             justify-content: center;
             align-items: center;
             transform: translateY(-80px);
-        }
-
-        .img-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width: 100%;
         }
 
         /* make images small and pretty */
@@ -161,23 +149,36 @@
             margin: 10px;
         }
 
+        .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+        }
+
+
         @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@1,100&display=swap');
 
         body {
-            font-family: "PT Serif";
             background-image: url("tropwater.webp");
+            /* Make website look like its from 2004 using ocean water background. */
             background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
+            /* Cover all of the background. For some reason it doesn't cover the sides if I don't add this.*/
         }
 
         #headText {
+            /* Make my headline in front of the images so the images aren't in front of it when minimizing the webpage. */
+            position: relative;
+            z-index: 2;
+
             text-align: center;
+            /* Center the headline. */
             color: white;
             text-shadow: 0 0 3px black, 0 0 5px black;
-            z-index: 2;
+            /* Cool styling */
         }
+
     </style>
 
 </head>
@@ -192,8 +193,8 @@
         <div class="img-container">
             <img id="leftImg" src="kidsPlayingInSand.jpeg" alt="Kids playing in the sand" class="form-image">
             <img id="leftImg" src="IndiaElephantRide.jpeg" alt="People riding elephants in India" class="form-image">
-            <!-- <img id="leftImg" src="goldHarold.jpeg" alt="Harold playing gold" class="form-image">
-            <img id="leftImg" src="akropolis.jpg.webp" alt="The akropolis" class="form-image"> -->
+            <img id="leftImg" src="goldHarold.jpeg" alt="Harold playing gold" class="form-image">
+            <img id="leftImg" src="akropolis.jpg.webp" alt="The akropolis" class="form-image">
             <!-- <img id="leftImg" src="rockeyMountainsPeopleHiking.jpeg" alt="People hiking in the Rockey Mountains" class="form-image">
             <img id="leftImg" src="koanpool2.webp" alt="Koan pool" class="form-image">
             <img id="leftImg" src="mujeres.webp" alt="Mujeres" class="form-image"> -->
@@ -204,8 +205,7 @@
 
             <div class="field">
                 <p>Contact info</p>
-                <input type="text" id="email" name="cxEmail" title="email" placeholder=" "
-                    pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required />
+                <input type="text" id="email" name="cxEmail" title="email" placeholder=" " required />
                 <label for="email">Email</label>
                 <span id="emailError" style="color: red; display: none;">Invalid email format</span>
             </div>
@@ -216,18 +216,18 @@
                 <label for="password">Password</label>
                 <span id="eyeCon">&#128064</span>
             </div>
-            <button type="submit">Login</button><br>
+            <button type="submit" id="loginButton">Login</button><br>
 
             <div class="field">
-                <p>Don't have an account? <a href="registration.html">Register here</a>.</p>
+                <p>Don't have an account? <a href="registration.html">Register here.</a></p>
             </div>
         </form>
 
         <div class="img-container" style="position:relative">
             <img id="rightImg" src="businessRestaurant.jpeg" alt="People in restaurant" class="form-image">
             <img id="rightImg" src="amazonForestPeople.jpeg" alt="People in the Amazon Forest" class="form-image">
-            <!-- <img id="rightImg" src="maldives.jpg" alt="The beach" class="form-image">
-            <img id="rightImg" src="akihabara.jpeg" alt="Akihabara" class="form-image"> -->
+            <img id="rightImg" src="maldives.jpg" alt="The beach" class="form-image">
+            <img id="rightImg" src="akihabara.jpeg" alt="Akihabara" class="form-image">
             <!-- <img id="rightImg" src="akropolis.jpg.webp" alt="Akropolis" class="form-image">
             <img id="rightImg" src="Koanpool.webp" alt="Koan pool" class="form-image">
             <img id="rightImg" src="mujeres2.webp" alt="Mujeres" class="form-image"> -->
@@ -235,20 +235,37 @@
     </div>
 
     <script>
-        function togglePasswordVisibility() {
-            var passwordInput = document.getElementById("password");
 
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                eyeIcon.innerHTML = "&#128584";
+        document.getElementById('loginButton').addEventListener('click', function() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var emailError = document.getElementById('emailError');
+
+            if (email.match(/[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/) == null) {
+                emailError.style.display = 'block';
+                return false;
             }
             else {
-                passwordInput.type = "password";
-                eyeIcon.innerHTML = "&#128064";
+                emailError.style.display = 'none';
+            }
+        });
+
+        function togglePasswordVisibility() {           // this function is onclick, and you click on the eyeCon (the icons).
+            var passwordInput = document.getElementById("password");
+
+            if (passwordInput.type === "password") {    // If the type = password:
+                passwordInput.type = "text";            // make type = text
+                eyeCon.innerHTML = "&#128584";          // change the icon to monkey closing its eyes.
+            }
+            else {                                      // If the type != password (when type = text):
+                passwordInput.type = "password";        // make type = password
+                eyeCon.innerHTML = "&#128064";          // change the icon to eyes.
             }
         }
-        var eyeIcon = document.getElementById("eyeCon");
-        eyeIcon.addEventListener('click', togglePasswordVisibility); 
+
+        var eyeCon = document.getElementById("eyeCon"); // this completes the function.
+        eyeCon.addEventListener('click', togglePasswordVisibility); // Listen to when the icon is clicked, then make the togglePassword function work.
+        
     </script>
     <footer class="containerFoot"></footer>
 </body>

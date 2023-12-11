@@ -66,10 +66,11 @@
 // });
 
 
-const mysql = require("mysql");
-const express = require("express");
-const fs = require("fs");
-const path = require("path");
+const mysql = require('mysql');
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+const ejs = require('ejs');
 
 
 const app = express();
@@ -92,10 +93,10 @@ app.listen(8000, err => {
 app.post("/insertusers", (req, res) => {
     console.log(req.body);
     var conn = mysql.createConnection({
-        host: "localhost",
-        user: "amitOOSD",
-        password: "password",
-        database: "proj7DataBase"
+        host: 'localhost',
+        user: 'amitOOSD',
+        password: 'password',
+        database: 'proj7DataBase'
     });
 
     conn.connect((err) => {
@@ -154,6 +155,28 @@ app.post("/insertcontactMessage", (req, res) => {
 });
 
 // End Create Message (Contact page)
+
+// START retrieve data from users database
+app.get("/retrieveusers", (req, res) => {
+    var conn = mysql.createConnection({
+        host: "localhost",
+        user: "amitOOSD",
+        password: "password",
+        database: "proj7DataBase"
+    });
+    conn.connect((err) => {
+        if (err) throw err;
+        var sql = "SELECT * FROM `users`";
+        conn.query(sql, (err, result) => {
+            if (err) throw err;
+            console.log(result);
+            res.send(result);
+        });
+    }
+    );
+}
+);
+// END retrieve data from users database
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/views/index.html");
