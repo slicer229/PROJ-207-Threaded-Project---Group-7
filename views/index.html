@@ -3,22 +3,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
     <title>Welcome to Xplore</title>
-    <link href="lightstyles.css" rel="stylesheet">
-	<link href="indexlight.css" rel="stylesheet">
-	<script type="text/javascript" src="template.js"></script>
+    <link href="lightstyles.css" rel="stylesheet"> <!--Universal Stylesheet-->
+	<link href="indexlight.css" rel="stylesheet"> <!-- Index.html-specific stylesheet-->
+	<script type="text/javascript" src="template.js"></script> <!-- Default HTML Elements for every page (navigation bar, footer)-->
 </head>
-<body onload="navBar(), footer()">
-    <nav id="navbar"></nav>
+<body onload="navBar(), footer()"> <!--Get navigation bar/footer on page load-->
+    <nav id="navbar"></nav> <!--Navigation Bar-->
 
-	<div id="bgimg"></div>
-	<div class="screenbox">
+	<div id="bgimg"></div>  <!--Background Image-->
 
-    <div class="mainbox">
-		<div id="headerbg">
-			<div id="headerbgdark">
-			<h1><img class="logo" src="transparent_logo.png"><br><span id="gradientheader">Welcome to Travel Experts</span></h1>
-			</div>
+	<div class="screenbox"> <!--Whole screen container - used to center .mainbox -->
+
+    <div class="mainbox"> <!--Main content container-->
+		<div id="headerbg"> <!--Background for content header -->
+			<!-- 
+			<div id="headerbgdark"> transparent
+			
+			</div> -->
 		</div>
+		<h1 style="position: absolute; top: 200px; width: 900px"><img class="logo" src="transparent_logo.png"><br><span id="gradientheader">Welcome to Travel Experts</span></h1>
 		<div id="homenav">
 			<div class="navbox" id="navbox3" onclick="window.open('registration')">
 				<h2>Register</h2>
